@@ -66,17 +66,17 @@ describe(@"Getter/Setter Tests", ^ {
     });
 
     it(@"Should handle NSNull", ^{
-        NSMutableDictionary* dict = [@{SDLNameRequest:
-                                           @{SDLNameParameters:
-                                                 @{SDLNameAlertText1:@"alert#1",
-                                                   SDLNameAlertText2:@"alert#2",
-                                                   SDLNameAlertText3:@"alert#3",
-                                                   SDLNameTTSChunks:[@[tts] mutableCopy],
-                                                   SDLNameDuration:@4357,
-                                                   SDLNamePlayTone:@YES,
-                                                   SDLNameProgressIndicator:@NO,
-                                                   SDLNameSoftButtons:[NSNull null]},
-                                             SDLNameOperationName:SDLNameAlert}} mutableCopy];
+        NSMutableDictionary* dict = [@{SDLRPCParameterNameRequest:
+                                           @{SDLRPCParameterNameParameters:
+                                                 @{SDLRPCParameterNameAlertText1:@"alert#1",
+                                                   SDLRPCParameterNameAlertText2:@"alert#2",
+                                                   SDLRPCParameterNameAlertText3:@"alert#3",
+                                                   SDLRPCParameterNameTTSChunks:[@[tts] mutableCopy],
+                                                   SDLRPCParameterNameDuration:@4357,
+                                                   SDLRPCParameterNamePlayTone:@YES,
+                                                   SDLRPCParameterNameProgressIndicator:@NO,
+                                                   SDLRPCParameterNameSoftButtons:@[[NSNull null]]},
+                                             SDLRPCParameterNameOperationName:SDLRPCFunctionNameAlert}} mutableCopy];
         SDLAlert* testRequest = [[SDLAlert alloc] initWithDictionary:dict];
 
         expect(testRequest.softButtons).to(beEmpty());

@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLFloat> *)longitudeDegrees {
-    return [parameters sdl_objectForName:SDLNameLongitudeDegrees];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLongitudeDegrees ofClass:NSNumber.class];
 }
 
 - (void)setLatitudeDegrees:(nullable NSNumber<SDLFloat> *)latitudeDegrees {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLFloat> *)latitudeDegrees {
-    return [parameters sdl_objectForName:SDLNameLatitudeDegrees];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLatitudeDegrees ofClass:NSNumber.class];
 }
 
 - (void)setLocationName:(nullable NSString *)locationName {
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)locationName {
-    return [parameters sdl_objectForName:SDLNameLocationName];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLocationName ofClass:NSString.class];
 }
 
 - (void)setAddressLines:(nullable NSArray<NSString *> *)addressLines {
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)locationDescription {
-    return [parameters sdl_objectForName:SDLNameLocationDescription];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLocationDescription ofClass:NSString.class];
 }
 
 - (void)setLocationDescription:(nullable NSString *)locationDescription {
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<NSString *> *)addressLines {
-    return [parameters sdl_objectForName:SDLNameAddressLines];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameAddressLines ofClass:NSString.class];
 }
 
 - (void)setPhoneNumber:(nullable NSString *)phoneNumber {
@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)phoneNumber {
-    return [parameters sdl_objectForName:SDLNamePhoneNumber];
+    return [parameters sdl_objectForName:SDLRPCParameterNamePhoneNumber ofClass:NSString.class];
 }
 
 - (void)setLocationImage:(nullable SDLImage *)locationImage {
@@ -105,7 +105,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLDeliveryMode)deliveryMode {
-    return [parameters sdl_objectForName:SDLNameDeliveryMode];
+    return [parameters sdl_enumForName:SDLRPCParameterNameDeliveryMode error:nil];
 }
 
 - (void)setTimeStamp:(nullable SDLDateTime *)timeStamp {

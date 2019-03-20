@@ -58,7 +58,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLSupportedSeat)id {
-    return [store sdl_objectForName:SDLNameId];
+    NSError *error;
+    return [store sdl_enumForName:SDLRPCParameterNameId error:&error];
 }
 
 - (void)setHeatingEnabled:(nullable NSNumber<SDLBool> *)heatingEnabled {
@@ -66,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLBool> *)heatingEnabled {
-    return [store sdl_objectForName:SDLNameHeatingEnabled];
+    return [store sdl_objectForName:SDLRPCParameterNameHeatingEnabled ofClass:NSNumber.class];
 }
 
 - (void)setCoolingEnabled:(nullable NSNumber<SDLBool> *)coolingEnabled {
@@ -74,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLBool> *)coolingEnabled {
-    return [store sdl_objectForName:SDLNameCoolingEnabled];
+    return [store sdl_objectForName:SDLRPCParameterNameCoolingEnabled ofClass:NSNumber.class];
 }
 
 - (void)setHeatingLevel:(nullable NSNumber<SDLInt> *)heatingLevel {
@@ -82,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)heatingLevel {
-    return [store sdl_objectForName:SDLNameHeatingLevel];
+    return [store sdl_objectForName:SDLRPCParameterNameHeatingLevel ofClass:NSNumber.class];
 }
 
 - (void)setCoolingLevel:(nullable NSNumber<SDLInt> *)coolingLevel {
@@ -90,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)coolingLevel {
-    return [store sdl_objectForName:SDLNameCoolingLevel];
+    return [store sdl_objectForName:SDLRPCParameterNameCoolingLevel ofClass:NSNumber.class];
 }
 
 - (void)setHorizontalPosition:(nullable NSNumber<SDLInt> *)horizontalPosition {
@@ -98,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)horizontalPosition {
-    return [store sdl_objectForName:SDLNameHorizontalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameHorizontalPosition ofClass:NSNumber.class];
 }
 
 - (void)setVerticalPosition:(nullable NSNumber<SDLInt> *)verticalPosition {
@@ -106,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)verticalPosition {
-    return [store sdl_objectForName:SDLNameVerticalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameVerticalPosition ofClass:NSNumber.class];
 }
 
 - (void)setFrontVerticalPosition:(nullable NSNumber<SDLInt> *)frontVerticalPosition {
@@ -114,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)frontVerticalPosition {
-    return [store sdl_objectForName:SDLNameFrontVerticalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameFrontVerticalPosition ofClass:NSNumber.class];
 }
 
 - (void)setBackVerticalPosition:(nullable NSNumber<SDLInt> *)backVerticalPosition {
@@ -122,7 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)backVerticalPosition {
-    return [store sdl_objectForName:SDLNameBackVerticalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameBackVerticalPosition ofClass:NSNumber.class];
 }
 
 - (void)setBackTiltAngle:(nullable NSNumber<SDLInt> *)backTiltAngle {
@@ -130,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)backTiltAngle {
-    return [store sdl_objectForName:SDLNameBackTiltAngle];
+    return [store sdl_objectForName:SDLRPCParameterNameBackTiltAngle ofClass:NSNumber.class];
 }
 
 -  (void)setHeadSupportHorizontalPosition:(nullable NSNumber<SDLInt> *)headSupportHorizontalPosition {
@@ -138,7 +139,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)headSupportHorizontalPosition {
-    return [store sdl_objectForName:SDLNameHeadSupportHorizontalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameHeadSupportHorizontalPosition ofClass:NSNumber.class];
 }
 
 -(void)setHeadSupportVerticalPosition:(nullable NSNumber<SDLInt> *)headSupportVerticalPosition {
@@ -146,7 +147,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)headSupportVerticalPosition {
-    return [store sdl_objectForName:SDLNameHeadSupportVerticalPosition];
+    return [store sdl_objectForName:SDLRPCParameterNameHeadSupportVerticalPosition ofClass:NSNumber.class];
 }
 
 - (void)setMassageEnabled:(nullable NSNumber<SDLBool> *)massageEnabled {
@@ -154,7 +155,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLBool> *)massageEnabled {
-    return [store sdl_objectForName:SDLNameMassageEnabled];
+    return [store sdl_objectForName:SDLRPCParameterNameMassageEnabled ofClass:NSNumber.class];
 
 }
 
@@ -163,7 +164,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLMassageModeData *> *)massageMode {
-   return [store sdl_objectForName:SDLNameMassageMode ];
+   return [store sdl_objectsForName:SDLRPCParameterNameMassageMode ofClass:SDLMassageModeData.class];
 }
 
 - (void)setMassageCushionFirmness:(nullable NSArray<SDLMassageCushionFirmness *> *)massageCushionFirmness {
@@ -171,7 +172,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLMassageCushionFirmness *> *)massageCushionFirmness {
-    return [store sdl_objectForName:SDLNameMassageCushionFirmness];
+    return [store sdl_objectsForName:SDLRPCParameterNameMassageCushionFirmness ofClass:SDLMassageCushionFirmness.class];
 }
 
 - (void)setMemory:(nullable SDLSeatMemoryAction *)memory {

@@ -7,14 +7,15 @@
 #import "NSMutableDictionary+Store.h"
 #import "SDLImage.h"
 #import "SDLMenuParams.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLAddCommand
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameAddCommand]) {
+    if (self = [super initWithName:SDLRPCFunctionNameAddCommand]) {
     }
     return self;
 }
@@ -106,7 +107,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)cmdID {
-    return [parameters sdl_objectForName:SDLNameCommandId];
+    NSError *error;
+    return [parameters sdl_objectForName:SDLRPCParameterNameCommandId ofClass:NSNumber.class error:&error];
 }
 
 - (void)setMenuParams:(nullable SDLMenuParams *)menuParams {
@@ -122,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<NSString *> *)vrCommands {
-    return [parameters sdl_objectForName:SDLNameVRCommands];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameVRCommands ofClass:NSString.class];
 }
 
 - (void)setCmdIcon:(nullable SDLImage *)cmdIcon {

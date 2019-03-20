@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLLanguage)language {
-    return [parameters sdl_objectForName:SDLNameLanguage];
+    return [parameters sdl_enumForName:SDLRPCParameterNameLanguage error:nil];
 }
 
 - (void)setHmiDisplayLanguage:(nullable SDLLanguage)hmiDisplayLanguage {
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLLanguage)hmiDisplayLanguage {
-    return [parameters sdl_objectForName:SDLNameHMIDisplayLanguage];
+    return [parameters sdl_enumForName:SDLRPCParameterNameHMIDisplayLanguage error:nil];
 }
 
 - (void)setDisplayCapabilities:(nullable SDLDisplayCapabilities *)displayCapabilities {
@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLHMIZoneCapabilities> *)hmiZoneCapabilities {
-    return [parameters sdl_objectForName:SDLNameHMIZoneCapabilities];
+    return [parameters sdl_enumsForName:SDLRPCParameterNameHMIZoneCapabilities error:nil];
 }
 
 - (void)setSpeechCapabilities:(nullable NSArray<SDLSpeechCapabilities> *)speechCapabilities {
@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLSpeechCapabilities> *)speechCapabilities {
-    return [parameters sdl_objectForName:SDLNameSpeechCapabilities];
+    return [parameters sdl_enumsForName:SDLRPCParameterNameSpeechCapabilities error:nil];
 }
 
 - (void)setPrerecordedSpeech:(nullable NSArray<SDLPrerecordedSpeech> *)prerecordedSpeech {
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLPrerecordedSpeech> *)prerecordedSpeech {
-    return [parameters sdl_objectForName:SDLNamePrerecordedSpeech];
+    return [parameters sdl_enumsForName:SDLRPCParameterNamePrerecordedSpeech error:nil];
 }
 
 - (void)setVrCapabilities:(nullable NSArray<SDLVRCapabilities> *)vrCapabilities {
@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLVRCapabilities> *)vrCapabilities {
-    return [parameters sdl_objectForName:SDLNameVRCapabilities];
+    return [parameters sdl_enumsForName:SDLRPCParameterNameVRCapabilities error:nil];
 }
 
 - (void)setAudioPassThruCapabilities:(nullable NSArray<SDLAudioPassThruCapabilities *> *)audioPassThruCapabilities {
@@ -143,7 +143,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<NSNumber<SDLInt> *> *)supportedDiagModes {
-    return [parameters sdl_objectForName:SDLNameSupportedDiagnosticModes];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameSupportedDiagnosticModes ofClass:NSNumber.class];
 }
 
 - (void)setHmiCapabilities:(nullable SDLHMICapabilities *)hmiCapabilities {
@@ -159,7 +159,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)sdlVersion {
-    return [parameters sdl_objectForName:SDLNameSDLVersion];
+    return [parameters sdl_objectForName:SDLRPCParameterNameSDLVersion ofClass:NSString.class];
 }
 
 - (void)setSystemSoftwareVersion:(nullable NSString *)systemSoftwareVersion {
@@ -167,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)systemSoftwareVersion {
-    return [parameters sdl_objectForName:SDLNameSystemSoftwareVersion];
+    return [parameters sdl_objectForName:SDLRPCParameterNameSystemSoftwareVersion ofClass:NSString.class];
 }
 
 - (void)setIconResumed:(nullable NSNumber<SDLBool> *)iconResumed {
@@ -175,7 +175,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLBool> *)iconResumed {
-    return [parameters sdl_objectForName:SDLNameIconResumed];
+    return [parameters sdl_objectForName:SDLRPCParameterNameIconResumed ofClass:NSNumber.class];
 }
 
 @end

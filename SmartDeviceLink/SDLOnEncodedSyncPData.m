@@ -21,7 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<NSString *> *)data {
-    return [parameters sdl_objectForName:SDLNameData];
+    NSError *error;
+    return [parameters sdl_objectsForName:SDLRPCParameterNameData ofClass:NSString.class error:&error];
 }
 
 - (void)setURL:(nullable NSString *)URL {
@@ -29,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)URL {
-    return [parameters sdl_objectForName:SDLNameURLUppercase];
+    return [parameters sdl_objectForName:SDLRPCParameterNameURLUppercase ofClass:NSString.class];
 }
 
 - (void)setTimeout:(nullable NSNumber<SDLInt> *)Timeout {
@@ -37,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLInt> *)Timeout {
-    return [parameters sdl_objectForName:SDLNameTimeoutCapitalized];
+    return [parameters sdl_objectForName:SDLRPCParameterNameTimeoutCapitalized ofClass:NSNumber.class];
 }
 
 @end

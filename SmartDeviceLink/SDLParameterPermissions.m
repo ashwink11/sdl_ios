@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<NSString *> *)allowed {
-    return [store sdl_objectForName:SDLNameAllowed];
+    NSError *error;
+    return [store sdl_objectsForName:SDLRPCParameterNameAllowed ofClass:NSString.class error:&error];
 }
 
 - (void)setUserDisallowed:(NSArray<NSString *> *)userDisallowed {
@@ -24,7 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<NSString *> *)userDisallowed {
-    return [store sdl_objectForName:SDLNameUserDisallowed];
+    NSError *error;
+    return [store sdl_objectsForName:SDLRPCParameterNameUserDisallowed ofClass:NSString.class error:&error];
 }
 
 @end

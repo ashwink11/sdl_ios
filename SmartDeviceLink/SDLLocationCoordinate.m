@@ -10,12 +10,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLLocationCoordinate
 
+- (instancetype)initWithLatitudeDegrees:(float)latitudeDegrees longitudeDegrees:(float)longitudeDegrees {
+    self = [self init];
+    if (!self) {
+        return nil;
+    }
+
+    self.latitudeDegrees = @(latitudeDegrees);
+    self.longitudeDegrees = @(longitudeDegrees);
+
+    return self;
+}
+
 - (void)setLongitudeDegrees:(NSNumber<SDLFloat> *)longitudeDegrees {
     [store sdl_setObject:longitudeDegrees forName:SDLNameLongitudeDegrees];
 }
 
 - (NSNumber<SDLFloat> *)longitudeDegrees {
-    return [store sdl_objectForName:SDLNameLongitudeDegrees];
+    NSError *error;
+    return [store sdl_objectForName:SDLRPCParameterNameLongitudeDegrees ofClass:NSNumber.class error:&error];
 }
 
 - (void)setLatitudeDegrees:(NSNumber<SDLFloat> *)latitudeDegrees {
@@ -23,7 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLFloat> *)latitudeDegrees {
-    return [store sdl_objectForName:SDLNameLatitudeDegrees];
+    NSError *error;
+    return [store sdl_objectForName:SDLRPCParameterNameLatitudeDegrees ofClass:NSNumber.class error:&error];
 }
 
 @end
