@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)displayLayout {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameDisplayLayout ofClass:NSString.class error:&error];
 }
 
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLTemplateColorScheme *)dayColorScheme {
-    return [parameters sdl_objectForName:SDLNameDayColorScheme ofClass:[SDLTemplateColorScheme class]];
+    return [parameters sdl_objectForName:SDLRPCParameterNameDayColorScheme ofClass:SDLTemplateColorScheme.class error:nil];
 }
 
 - (void)setNightColorScheme:(nullable SDLTemplateColorScheme *)nightColorScheme {
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLTemplateColorScheme *)nightColorScheme {
-    return [parameters sdl_objectForName:SDLNameNightColorScheme ofClass:[SDLTemplateColorScheme class]];
+    return [parameters sdl_objectForName:SDLRPCParameterNameNightColorScheme ofClass:SDLTemplateColorScheme.class error:nil];
 }
 
 @end

@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLHMILevel)hmiLevel {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameHMILevel error:&error];
 }
 
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLAudioStreamingState)audioStreamingState {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameAudioStreamingState error:&error];
 }
 
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLSystemContext)systemContext {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameSystemContext error:&error];
 }
 

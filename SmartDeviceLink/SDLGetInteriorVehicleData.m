@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLModuleType)moduleType {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameModuleType error:&error];
 }
 
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLBool> *)subscribe {
-    return [parameters sdl_objectForName:SDLRPCParameterNameSubscribe ofClass:NSNumber.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameSubscribe ofClass:NSNumber.class error:nil];
 }
 
 @end

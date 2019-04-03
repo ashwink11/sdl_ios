@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLTemperatureUnit)unit {
-    NSError *error;
+    NSError *error = nil;
     return [store sdl_enumForName:SDLRPCParameterNameUnit error:&error];
 }
 
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLFloat> *)value {
-    NSError *error;
+    NSError *error = nil;
     return [store sdl_objectForName:SDLRPCParameterNameValue ofClass:NSNumber.class error:&error];
 }
 

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLTouchType)type {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameType error:&error];
 }
 
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<SDLTouchEvent *> *)event {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectsForName:SDLRPCParameterNameEvent ofClass:SDLTouchEvent.class error:&error];
 }
 

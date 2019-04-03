@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<SDLTTSChunk *> *)ttsChunks {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectsForName:SDLRPCParameterNameTTSChunks ofClass:SDLTTSChunk.class error:&error];
 }
 

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)cmdID {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameCommandId ofClass:NSNumber.class error:&error];
 }
 
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLTriggerSource)triggerSource {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameTriggerSource error:&error];
 }
 

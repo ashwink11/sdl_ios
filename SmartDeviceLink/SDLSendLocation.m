@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLFloat> *)longitudeDegrees {
-    return [parameters sdl_objectForName:SDLRPCParameterNameLongitudeDegrees ofClass:NSNumber.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLongitudeDegrees ofClass:NSNumber.class error:nil];
 }
 
 - (void)setLatitudeDegrees:(nullable NSNumber<SDLFloat> *)latitudeDegrees {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSNumber<SDLFloat> *)latitudeDegrees {
-    return [parameters sdl_objectForName:SDLRPCParameterNameLatitudeDegrees ofClass:NSNumber.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLatitudeDegrees ofClass:NSNumber.class error:nil];
 }
 
 - (void)setLocationName:(nullable NSString *)locationName {
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)locationName {
-    return [parameters sdl_objectForName:SDLRPCParameterNameLocationName ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLocationName ofClass:NSString.class error:nil];
 }
 
 - (void)setAddressLines:(nullable NSArray<NSString *> *)addressLines {
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)locationDescription {
-    return [parameters sdl_objectForName:SDLRPCParameterNameLocationDescription ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLocationDescription ofClass:NSString.class error:nil];
 }
 
 - (void)setLocationDescription:(nullable NSString *)locationDescription {
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<NSString *> *)addressLines {
-    return [parameters sdl_objectsForName:SDLRPCParameterNameAddressLines ofClass:NSString.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameAddressLines ofClass:NSString.class error:nil];
 }
 
 - (void)setPhoneNumber:(nullable NSString *)phoneNumber {
@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)phoneNumber {
-    return [parameters sdl_objectForName:SDLRPCParameterNamePhoneNumber ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNamePhoneNumber ofClass:NSString.class error:nil];
 }
 
 - (void)setLocationImage:(nullable SDLImage *)locationImage {
@@ -97,7 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLImage *)locationImage {
-    return [parameters sdl_objectForName:SDLNameLocationImage ofClass:SDLImage.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameLocationImage ofClass:SDLImage.class error:nil];
 }
 
 - (void)setDeliveryMode:(nullable SDLDeliveryMode)deliveryMode {
@@ -113,7 +113,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLDateTime *)timeStamp {
-    return [parameters sdl_objectForName:SDLNameLocationTimeStamp ofClass:SDLDateTime.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameTimeStamp ofClass:SDLDateTime.class error:nil];
 }
 
 - (void)setAddress:(nullable SDLOasisAddress *)address {
@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLOasisAddress *)address {
-    return [parameters sdl_objectForName:SDLNameAddress ofClass:SDLOasisAddress.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameAddress ofClass:SDLOasisAddress.class error:nil];
 }
 
 @end

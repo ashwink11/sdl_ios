@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLLocationDetails *> *)waypoints {
-    return [parameters sdl_objectsForName:SDLNameWayPoints ofClass:SDLLocationDetails.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameWayPoints ofClass:SDLLocationDetails.class error:nil];
 }
 
 @end

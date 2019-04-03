@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)hours {
-    NSError *error;
+    NSError *error = nil;
     return [store sdl_objectForName:SDLRPCParameterNameHours ofClass:NSNumber.class error:&error];
 }
 
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)minutes {
-    NSError *error;
+    NSError *error = nil;
     return [store sdl_objectForName:SDLRPCParameterNameMinutes ofClass:NSNumber.class error:&error];
 }
 
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)seconds {
-    NSError *error;
+    NSError *error = nil;
     return [store sdl_objectForName:SDLRPCParameterNameSeconds ofClass:NSNumber.class error:&error];
 }
 

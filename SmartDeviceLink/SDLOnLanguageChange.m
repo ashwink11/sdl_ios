@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLLanguage)language {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameLanguage error:&error];
 }
 
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLLanguage)hmiDisplayLanguage {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameHMIDisplayLanguage error:&error];
 }
 

@@ -120,7 +120,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLSyncMsgVersion *)syncMsgVersion {
-    return [parameters sdl_objectForName:SDLNameSyncMessageVersion ofClass:SDLSyncMsgVersion.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameSyncMessageVersion ofClass:SDLSyncMsgVersion.class error:nil];
 }
 
 - (void)setAppName:(NSString *)appName {
@@ -128,7 +128,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)appName {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameAppName ofClass:NSString.class error:&error];
 }
 
@@ -137,7 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLTTSChunk *> *)ttsName {
-    return [parameters sdl_objectsForName:SDLNameTTSName ofClass:SDLTTSChunk.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameTTSName ofClass:SDLTTSChunk.class error:nil];
 }
 
 - (void)setNgnMediaScreenAppName:(nullable NSString *)ngnMediaScreenAppName {
@@ -145,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)ngnMediaScreenAppName {
-    return [parameters sdl_objectForName:SDLRPCParameterNameNGNMediaScreenAppName ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameNGNMediaScreenAppName ofClass:NSString.class error:nil];
 }
 
 - (void)setVrSynonyms:(nullable NSArray<NSString *> *)vrSynonyms {
@@ -153,7 +153,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<NSString *> *)vrSynonyms {
-    return [parameters sdl_objectsForName:SDLRPCParameterNameVRSynonyms ofClass:NSString.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameVRSynonyms ofClass:NSString.class error:nil];
 }
 
 - (void)setIsMediaApplication:(NSNumber<SDLBool> *)isMediaApplication {
@@ -161,7 +161,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLBool> *)isMediaApplication {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameIsMediaApplication ofClass:NSNumber.class error:&error];
 }
 
@@ -170,7 +170,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLLanguage)languageDesired {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameLanguageDesired error:&error];
 }
 
@@ -179,7 +179,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (SDLLanguage)hmiDisplayLanguageDesired {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_enumForName:SDLRPCParameterNameHMIDisplayLanguageDesired error:&error];
 }
 
@@ -196,7 +196,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)hashID {
-    return [parameters sdl_objectForName:SDLRPCParameterNameHashId ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameHashId ofClass:NSString.class error:nil];
 }
 
 - (void)setDeviceInfo:(nullable SDLDeviceInfo *)deviceInfo {
@@ -204,7 +204,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLDeviceInfo *)deviceInfo {
-    return [parameters sdl_objectForName:SDLNameDeviceInfo ofClass:SDLDeviceInfo.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameDeviceInfo ofClass:SDLDeviceInfo.class error:nil];
 }
 
 - (void)setAppID:(NSString *)appID {
@@ -212,7 +212,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)appID {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameAppId ofClass:NSString.class error:&error];
 }
 
@@ -221,7 +221,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSString *)fullAppID {
-    return [parameters sdl_objectForName:SDLRPCParameterNameFullAppID ofClass:NSString.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameFullAppID ofClass:NSString.class error:nil];
 }
 
 - (void)setAppInfo:(nullable SDLAppInfo *)appInfo {
@@ -229,7 +229,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLAppInfo *)appInfo {
-    return [parameters sdl_objectForName:SDLNameAppInfo ofClass:SDLAppInfo.class];
+    return [parameters sdl_objectForName:SDLRPCParameterNameAppInfo ofClass:SDLAppInfo.class error:nil];
 }
 
 - (void)setDayColorScheme:(nullable SDLTemplateColorScheme *)dayColorScheme {
@@ -237,7 +237,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLTemplateColorScheme *)dayColorScheme {
-    return [parameters sdl_objectForName:SDLNameDayColorScheme ofClass:[SDLTemplateColorScheme class]];
+    return [parameters sdl_objectForName:SDLRPCParameterNameDayColorScheme ofClass:SDLTemplateColorScheme.class error:nil];
 }
 
 - (void)setNightColorScheme:(nullable SDLTemplateColorScheme *)nightColorScheme {
@@ -245,7 +245,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable SDLTemplateColorScheme *)nightColorScheme {
-    return [parameters sdl_objectForName:SDLNameNightColorScheme ofClass:[SDLTemplateColorScheme class]];
+    return [parameters sdl_objectForName:SDLRPCParameterNameNightColorScheme ofClass:SDLTemplateColorScheme.class error:nil];
 }
 
 @end

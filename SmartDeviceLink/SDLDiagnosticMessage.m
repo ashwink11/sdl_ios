@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)targetID {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameTargetId ofClass:NSNumber.class error:&error];
 }
 
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSNumber<SDLInt> *)messageLength {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectForName:SDLRPCParameterNameMessageLength ofClass:NSNumber.class error:&error];
 }
 
@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSArray<NSNumber<SDLInt> *> *)messageData {
-    NSError *error;
+    NSError *error = nil;
     return [parameters sdl_objectsForName:SDLRPCParameterNameMessageData ofClass:NSNumber.class error:&error];
 }
 

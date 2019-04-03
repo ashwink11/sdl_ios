@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLTurn *> *)turnList {
-    return [parameters sdl_objectsForName:SDLNameTurnList ofClass:SDLTurn.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameTurnList ofClass:SDLTurn.class error:nil];
 }
 
 - (void)setSoftButtons:(nullable NSArray<SDLSoftButton *> *)softButtons {
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (nullable NSArray<SDLSoftButton *> *)softButtons {
-    return [parameters sdl_objectsForName:SDLNameSoftButtons ofClass:SDLSoftButton.class];
+    return [parameters sdl_objectsForName:SDLRPCParameterNameSoftButtons ofClass:SDLSoftButton.class error:nil];
 }
 
 @end
