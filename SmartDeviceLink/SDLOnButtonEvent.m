@@ -4,20 +4,21 @@
 #import "SDLOnButtonEvent.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLOnButtonEvent
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameOnButtonEvent]) {
+    if (self = [super initWithName:SDLRPCFunctionNameOnButtonEvent]) {
     }
     return self;
 }
 
 - (void)setButtonName:(SDLButtonName)buttonName {
-    [parameters sdl_setObject:buttonName forName:SDLNameButtonName];
+    [parameters sdl_setObject:buttonName forName:SDLRPCParameterNameButtonName];
 }
 
 - (SDLButtonName)buttonName {
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setButtonEventMode:(SDLButtonEventMode)buttonEventMode {
-    [parameters sdl_setObject:buttonEventMode forName:SDLNameButtonEventMode];
+    [parameters sdl_setObject:buttonEventMode forName:SDLRPCParameterNameButtonEventMode];
 }
 
 - (SDLButtonEventMode)buttonEventMode {
@@ -35,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCustomButtonID:(nullable NSNumber<SDLInt> *)customButtonID {
-    [parameters sdl_setObject:customButtonID forName:SDLNameCustomButtonId];
+    [parameters sdl_setObject:customButtonID forName:SDLRPCParameterNameCustomButtonId];
 }
 
 - (nullable NSNumber<SDLInt> *)customButtonID {

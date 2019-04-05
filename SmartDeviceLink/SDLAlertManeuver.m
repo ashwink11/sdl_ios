@@ -5,7 +5,8 @@
 #import "SDLAlertManeuver.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSoftButton.h"
 #import "SDLTTSChunk.h"
 
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLAlertManeuver
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameAlertManeuver]) {
+    if (self = [super initWithName:SDLRPCFunctionNameAlertManeuver]) {
     }
     return self;
 }
@@ -38,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTtsChunks:(nullable NSArray<SDLTTSChunk *> *)ttsChunks {
-    [parameters sdl_setObject:ttsChunks forName:SDLNameTTSChunks];
+    [parameters sdl_setObject:ttsChunks forName:SDLRPCParameterNameTTSChunks];
 }
 
 - (nullable NSArray<SDLTTSChunk *> *)ttsChunks {
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSoftButtons:(nullable NSArray<SDLSoftButton *> *)softButtons {
-    [parameters sdl_setObject:softButtons forName:SDLNameSoftButtons];
+    [parameters sdl_setObject:softButtons forName:SDLRPCParameterNameSoftButtons];
 }
 
 - (nullable NSArray<SDLSoftButton *> *)softButtons {

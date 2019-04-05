@@ -5,7 +5,7 @@
 #import "SDLRPCResponse.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
         return nil;
     }
 
-    messageType = SDLNameResponse;
+    messageType = SDLRPCParameterNameResponse;
     [store sdl_setObject:function forName:messageType];
 
     return self;
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
         return nil;
     }
 
-    messageType = SDLNameResponse;
+    messageType = SDLRPCParameterNameResponse;
     [store sdl_setObject:function forName:messageType];
     
     return self;
@@ -42,11 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCorrelationID:(NSNumber<SDLInt> *)corrID {
-    [function sdl_setObject:corrID forName:SDLNameCorrelationId];
+    [function sdl_setObject:corrID forName:SDLRPCParameterNameCorrelationId];
 }
 
 - (void)setSuccess:(NSNumber<SDLBool> *)success {
-    [parameters sdl_setObject:success forName:SDLNameSuccess];
+    [parameters sdl_setObject:success forName:SDLRPCParameterNameSuccess];
 }
 
 - (NSNumber<SDLBool> *)success {
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setResultCode:(SDLResult)resultCode {
-    [parameters sdl_setObject:resultCode forName:SDLNameResultCode];
+    [parameters sdl_setObject:resultCode forName:SDLRPCParameterNameResultCode];
 }
 
 - (SDLResult)resultCode {
@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setInfo:(nullable NSString *)info {
-    [parameters sdl_setObject:info forName:SDLNameInfo];
+    [parameters sdl_setObject:info forName:SDLRPCParameterNameInfo];
 }
 
 - (nullable NSString *)info {

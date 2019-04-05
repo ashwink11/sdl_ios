@@ -8,7 +8,8 @@
 #import "SDLImage.h"
 #import "SDLMetadataTags.h"
 #import "SDLMetadataType.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSoftButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLShow
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameShow]) {
+    if (self = [super initWithName:SDLRPCFunctionNameShow]) {
     }
     return self;
 }
@@ -97,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMainField1:(nullable NSString *)mainField1 {
-    [parameters sdl_setObject:mainField1 forName:SDLNameMainField1];
+    [parameters sdl_setObject:mainField1 forName:SDLRPCParameterNameMainField1];
 }
 
 - (nullable NSString *)mainField1 {
@@ -105,7 +106,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMainField2:(nullable NSString *)mainField2 {
-    [parameters sdl_setObject:mainField2 forName:SDLNameMainField2];
+    [parameters sdl_setObject:mainField2 forName:SDLRPCParameterNameMainField2];
 }
 
 - (nullable NSString *)mainField2 {
@@ -113,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMainField3:(nullable NSString *)mainField3 {
-    [parameters sdl_setObject:mainField3 forName:SDLNameMainField3];
+    [parameters sdl_setObject:mainField3 forName:SDLRPCParameterNameMainField3];
 }
 
 - (nullable NSString *)mainField3 {
@@ -121,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMainField4:(nullable NSString *)mainField4 {
-    [parameters sdl_setObject:mainField4 forName:SDLNameMainField4];
+    [parameters sdl_setObject:mainField4 forName:SDLRPCParameterNameMainField4];
 }
 
 - (nullable NSString *)mainField4 {
@@ -129,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAlignment:(nullable SDLTextAlignment)alignment {
-    [parameters sdl_setObject:alignment forName:SDLNameAlignment];
+    [parameters sdl_setObject:alignment forName:SDLRPCParameterNameAlignment];
 }
 
 - (nullable SDLTextAlignment)alignment {
@@ -137,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStatusBar:(nullable NSString *)statusBar {
-    [parameters sdl_setObject:statusBar forName:SDLNameStatusBar];
+    [parameters sdl_setObject:statusBar forName:SDLRPCParameterNameStatusBar];
 }
 
 - (nullable NSString *)statusBar {
@@ -145,7 +146,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMediaClock:(nullable NSString *)mediaClock {
-    [parameters sdl_setObject:mediaClock forName:SDLNameMediaClock];
+    [parameters sdl_setObject:mediaClock forName:SDLRPCParameterNameMediaClock];
 }
 
 - (nullable NSString *)mediaClock {
@@ -153,7 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMediaTrack:(nullable NSString *)mediaTrack {
-    [parameters sdl_setObject:mediaTrack forName:SDLNameMediaTrack];
+    [parameters sdl_setObject:mediaTrack forName:SDLRPCParameterNameMediaTrack];
 }
 
 - (nullable NSString *)mediaTrack {
@@ -161,7 +162,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setGraphic:(nullable SDLImage *)graphic {
-    [parameters sdl_setObject:graphic forName:SDLNameGraphic];
+    [parameters sdl_setObject:graphic forName:SDLRPCParameterNameGraphic];
 }
 
 - (nullable SDLImage *)graphic {
@@ -169,7 +170,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSecondaryGraphic:(nullable SDLImage *)secondaryGraphic {
-    [parameters sdl_setObject:secondaryGraphic forName:SDLNameSecondaryGraphic];
+    [parameters sdl_setObject:secondaryGraphic forName:SDLRPCParameterNameSecondaryGraphic];
 }
 
 - (nullable SDLImage *)secondaryGraphic {
@@ -177,7 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSoftButtons:(nullable NSArray<SDLSoftButton *> *)softButtons {
-    [parameters sdl_setObject:softButtons forName:SDLNameSoftButtons];
+    [parameters sdl_setObject:softButtons forName:SDLRPCParameterNameSoftButtons];
 }
 
 - (nullable NSArray<SDLSoftButton *> *)softButtons {
@@ -185,7 +186,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCustomPresets:(nullable NSArray<NSString *> *)customPresets {
-    [parameters sdl_setObject:customPresets forName:SDLNameCustomPresets];
+    [parameters sdl_setObject:customPresets forName:SDLRPCParameterNameCustomPresets];
 }
 
 - (nullable NSArray<NSString *> *)customPresets {
@@ -193,7 +194,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMetadataTags:(nullable SDLMetadataTags *)metadataTags {
-    [parameters sdl_setObject:metadataTags forName:SDLNameMetadataTags];
+    [parameters sdl_setObject:metadataTags forName:SDLRPCParameterNameMetadataTags];
 }
 
 - (nullable SDLMetadataTags *)metadataTags {

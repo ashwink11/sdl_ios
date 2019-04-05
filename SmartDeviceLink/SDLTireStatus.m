@@ -4,7 +4,7 @@
 #import "SDLTireStatus.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLSingleTireStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLTireStatus
 
 - (void)setPressureTelltale:(SDLWarningLightStatus)pressureTelltale {
-    [store sdl_setObject:pressureTelltale forName:SDLNamePressureTelltale];
+    [store sdl_setObject:pressureTelltale forName:SDLRPCParameterNamePressureTelltale];
 }
 
 - (SDLWarningLightStatus)pressureTelltale {
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLeftFront:(SDLSingleTireStatus *)leftFront {
-    [store sdl_setObject:leftFront forName:SDLNameLeftFront];
+    [store sdl_setObject:leftFront forName:SDLRPCParameterNameLeftFront];
 }
 
 - (SDLSingleTireStatus *)leftFront {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRightFront:(SDLSingleTireStatus *)rightFront {
-    [store sdl_setObject:rightFront forName:SDLNameRightFront];
+    [store sdl_setObject:rightFront forName:SDLRPCParameterNameRightFront];
 }
 
 - (SDLSingleTireStatus *)rightFront {
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLeftRear:(SDLSingleTireStatus *)leftRear {
-    [store sdl_setObject:leftRear forName:SDLNameLeftRear];
+    [store sdl_setObject:leftRear forName:SDLRPCParameterNameLeftRear];
 }
 
 - (SDLSingleTireStatus *)leftRear {
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRightRear:(SDLSingleTireStatus *)rightRear {
-    [store sdl_setObject:rightRear forName:SDLNameRightRear];
+    [store sdl_setObject:rightRear forName:SDLRPCParameterNameRightRear];
 }
 
 - (SDLSingleTireStatus *)rightRear {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setInnerLeftRear:(SDLSingleTireStatus *)innerLeftRear {
-    [store sdl_setObject:innerLeftRear forName:SDLNameInnerLeftRear];
+    [store sdl_setObject:innerLeftRear forName:SDLRPCParameterNameInnerLeftRear];
 }
 
 - (SDLSingleTireStatus *)innerLeftRear {
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setInnerRightRear:(SDLSingleTireStatus *)innerRightRear {
-    [store sdl_setObject:innerRightRear forName:SDLNameInnerRightRear];
+    [store sdl_setObject:innerRightRear forName:SDLRPCParameterNameInnerRightRear];
 }
 
 - (SDLSingleTireStatus *)innerRightRear {

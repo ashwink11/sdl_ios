@@ -8,7 +8,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLRectangle.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 @implementation SDLRectangle
 
@@ -29,7 +29,7 @@
 }
 
 - (void)setX:(NSNumber<SDLFloat> *)x {
-    [store sdl_setObject:x forName:SDLNameX];
+    [store sdl_setObject:x forName:SDLRPCParameterNameX];
 }
 
 - (NSNumber<SDLFloat> *)x {
@@ -38,7 +38,7 @@
 }
 
 - (void)setY:(NSNumber<SDLFloat> *)y {
-    [store sdl_setObject:y forName:SDLNameY];
+    [store sdl_setObject:y forName:SDLRPCParameterNameY];
 }
 
 - (NSNumber<SDLFloat> *)y {
@@ -47,7 +47,7 @@
 }
 
 - (void)setWidth:(NSNumber<SDLFloat> *)width {
-    [store sdl_setObject:width forName:SDLNameWidth];
+    [store sdl_setObject:width forName:SDLRPCParameterNameWidth];
 }
 
 - (NSNumber<SDLFloat> *)width {
@@ -56,7 +56,7 @@
 }
 
 - (void)setHeight:(NSNumber<SDLFloat> *)height {
-    [store sdl_setObject:height forName:SDLNameHeight];
+    [store sdl_setObject:height forName:SDLRPCParameterNameHeight];
 }
 
 - (NSNumber<SDLFloat> *)height {

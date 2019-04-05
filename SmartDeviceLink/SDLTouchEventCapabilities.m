@@ -5,14 +5,14 @@
 #import "SDLTouchEventCapabilities.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLTouchEventCapabilities
 
 - (void)setPressAvailable:(NSNumber<SDLBool> *)pressAvailable {
-    [store sdl_setObject:pressAvailable forName:SDLNamePressAvailable];
+    [store sdl_setObject:pressAvailable forName:SDLRPCParameterNamePressAvailable];
 }
 
 - (NSNumber<SDLBool> *)pressAvailable {
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMultiTouchAvailable:(NSNumber<SDLBool> *)multiTouchAvailable {
-    [store sdl_setObject:multiTouchAvailable forName:SDLNameMultiTouchAvailable];
+    [store sdl_setObject:multiTouchAvailable forName:SDLRPCParameterNameMultiTouchAvailable];
 }
 
 - (NSNumber<SDLBool> *)multiTouchAvailable {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDoublePressAvailable:(NSNumber<SDLBool> *)doublePressAvailable {
-    [store sdl_setObject:doublePressAvailable forName:SDLNameDoublePressAvailable];
+    [store sdl_setObject:doublePressAvailable forName:SDLRPCParameterNameDoublePressAvailable];
 }
 
 - (NSNumber<SDLBool> *)doublePressAvailable {

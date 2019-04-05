@@ -4,7 +4,7 @@
 #import "SDLAppInfo.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 static NSString *const SDLBundleShortVersionStringKey = @"CFBundleShortVersionString";
 static NSString *const SDLBundleAppNameKey = @"CFBundleName";
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppDisplayName:(NSString *)appDisplayName {
-    [store sdl_setObject:appDisplayName forName:SDLNameAppDisplayName];
+    [store sdl_setObject:appDisplayName forName:SDLRPCParameterNameAppDisplayName];
 }
 
 - (NSString *)appDisplayName {
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppBundleID:(NSString *)appBundleID {
-    [store sdl_setObject:appBundleID forName:SDLNameAppBundleId];
+    [store sdl_setObject:appBundleID forName:SDLRPCParameterNameAppBundleId];
 }
 
 - (NSString *)appBundleID {
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppVersion:(NSString *)appVersion {
-    [store sdl_setObject:appVersion forName:SDLNameAppVersion];
+    [store sdl_setObject:appVersion forName:SDLRPCParameterNameAppVersion];
 }
 
 - (NSString *)appVersion {

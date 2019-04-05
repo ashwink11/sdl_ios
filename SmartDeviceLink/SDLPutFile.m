@@ -4,7 +4,8 @@
 #import "SDLPutFile.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 #import <zlib.h>
 
@@ -13,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLPutFile
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNamePutFile]) {
+    if (self = [super initWithName:SDLRPCFunctionNamePutFile]) {
     }
     return self;
 }
@@ -83,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Getters and Setters
 
 - (void)setSyncFileName:(NSString *)syncFileName {
-    [parameters sdl_setObject:syncFileName forName:SDLNameSyncFileName];
+    [parameters sdl_setObject:syncFileName forName:SDLRPCParameterNameSyncFileName];
 }
 
 - (NSString *)syncFileName {
@@ -92,7 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFileType:(SDLFileType)fileType {
-    [parameters sdl_setObject:fileType forName:SDLNameFileType];
+    [parameters sdl_setObject:fileType forName:SDLRPCParameterNameFileType];
 }
 
 - (SDLFileType)fileType {
@@ -101,7 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPersistentFile:(nullable NSNumber<SDLBool> *)persistentFile {
-    [parameters sdl_setObject:persistentFile forName:SDLNamePersistentFile];
+    [parameters sdl_setObject:persistentFile forName:SDLRPCParameterNamePersistentFile];
 }
 
 - (nullable NSNumber<SDLBool> *)persistentFile {
@@ -109,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSystemFile:(nullable NSNumber<SDLBool> *)systemFile {
-    [parameters sdl_setObject:systemFile forName:SDLNameSystemFile];
+    [parameters sdl_setObject:systemFile forName:SDLRPCParameterNameSystemFile];
 }
 
 - (nullable NSNumber<SDLBool> *)systemFile {
@@ -117,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setOffset:(nullable NSNumber<SDLUInt> *)offset {
-    [parameters sdl_setObject:offset forName:SDLNameOffset];
+    [parameters sdl_setObject:offset forName:SDLRPCParameterNameOffset];
 }
 
 - (nullable NSNumber<SDLUInt> *)offset {
@@ -125,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLength:(nullable NSNumber<SDLUInt> *)length {
-    [parameters sdl_setObject:length forName:SDLNameLength];
+    [parameters sdl_setObject:length forName:SDLRPCParameterNameLength];
 }
 
 - (nullable NSNumber<SDLUInt> *)length {
@@ -133,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCrc:(nullable NSNumber<SDLUInt> *)crc {
-    [parameters sdl_setObject:crc forName:SDLNameCRC];
+    [parameters sdl_setObject:crc forName:SDLRPCParameterNameCRC];
 }
 
 - (nullable NSNumber<SDLUInt> *)crc {

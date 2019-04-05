@@ -5,14 +5,14 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLAmbientLightStatus.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLHeadLampStatus
 
 - (void)setLowBeamsOn:(NSNumber<SDLBool> *)lowBeamsOn {
-    [store sdl_setObject:lowBeamsOn forName:SDLNameLowBeamsOn];
+    [store sdl_setObject:lowBeamsOn forName:SDLRPCParameterNameLowBeamsOn];
 }
 
 - (NSNumber<SDLBool> *)lowBeamsOn {
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHighBeamsOn:(NSNumber<SDLBool> *)highBeamsOn {
-    [store sdl_setObject:highBeamsOn forName:SDLNameHighBeamsOn];
+    [store sdl_setObject:highBeamsOn forName:SDLRPCParameterNameHighBeamsOn];
 }
 
 - (NSNumber<SDLBool> *)highBeamsOn {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAmbientLightSensorStatus:(nullable SDLAmbientLightStatus)ambientLightSensorStatus {
-    [store sdl_setObject:ambientLightSensorStatus forName:SDLNameAmbientLightSensorStatus];
+    [store sdl_setObject:ambientLightSensorStatus forName:SDLRPCParameterNameAmbientLightSensorStatus];
 }
 
 - (nullable SDLAmbientLightStatus)ambientLightSensorStatus {

@@ -5,7 +5,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLImage.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setType:(SDLSoftButtonType)type {
-    [store sdl_setObject:type forName:SDLNameType];
+    [store sdl_setObject:type forName:SDLRPCParameterNameType];
 }
 
 - (SDLSoftButtonType)type {
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setText:(nullable NSString *)text {
-    [store sdl_setObject:text forName:SDLNameText];
+    [store sdl_setObject:text forName:SDLRPCParameterNameText];
 }
 
 - (nullable NSString *)text {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImage:(nullable SDLImage *)image {
-    [store sdl_setObject:image forName:SDLNameImage];
+    [store sdl_setObject:image forName:SDLRPCParameterNameImage];
 }
 
 - (nullable SDLImage *)image {
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setIsHighlighted:(nullable NSNumber<SDLBool> *)isHighlighted {
-    [store sdl_setObject:isHighlighted forName:SDLNameIsHighlighted];
+    [store sdl_setObject:isHighlighted forName:SDLRPCParameterNameIsHighlighted];
 }
 
 - (nullable NSNumber<SDLBool> *)isHighlighted {
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSoftButtonID:(NSNumber<SDLInt> *)softButtonID {
-    [store sdl_setObject:softButtonID forName:SDLNameSoftButtonId];
+    [store sdl_setObject:softButtonID forName:SDLRPCParameterNameSoftButtonId];
 }
 
 - (NSNumber<SDLInt> *)softButtonID {
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSystemAction:(nullable SDLSystemAction)systemAction {
-    [store sdl_setObject:systemAction forName:SDLNameSystemAction];
+    [store sdl_setObject:systemAction forName:SDLRPCParameterNameSystemAction];
 }
 
 - (nullable SDLSystemAction)systemAction {

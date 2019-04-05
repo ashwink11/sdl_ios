@@ -5,14 +5,14 @@
 #import "SDLSoftButtonCapabilities.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLSoftButtonCapabilities
 
 - (void)setShortPressAvailable:(NSNumber<SDLBool> *)shortPressAvailable {
-    [store sdl_setObject:shortPressAvailable forName:SDLNameShortPressAvailable];
+    [store sdl_setObject:shortPressAvailable forName:SDLRPCParameterNameShortPressAvailable];
 }
 
 - (NSNumber<SDLBool> *)shortPressAvailable {
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLongPressAvailable:(NSNumber<SDLBool> *)longPressAvailable {
-    [store sdl_setObject:longPressAvailable forName:SDLNameLongPressAvailable];
+    [store sdl_setObject:longPressAvailable forName:SDLRPCParameterNameLongPressAvailable];
 }
 
 - (NSNumber<SDLBool> *)longPressAvailable {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setUpDownAvailable:(NSNumber<SDLBool> *)upDownAvailable {
-    [store sdl_setObject:upDownAvailable forName:SDLNameUpDownAvailable];
+    [store sdl_setObject:upDownAvailable forName:SDLRPCParameterNameUpDownAvailable];
 }
 
 - (NSNumber<SDLBool> *)upDownAvailable {
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImageSupported:(NSNumber<SDLBool> *)imageSupported {
-    [store sdl_setObject:imageSupported forName:SDLNameImageSupported];
+    [store sdl_setObject:imageSupported forName:SDLRPCParameterNameImageSupported];
 }
 
 - (NSNumber<SDLBool> *)imageSupported {

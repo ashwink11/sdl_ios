@@ -24,7 +24,7 @@ extern SDLErrorDomain *const SDLErrorDomainSoftButtonManager;
 extern SDLErrorDomain *const SDLErrorDomainMenuManager;
 extern SDLErrorDomain *const SDLErrorDomainChoiceSetManager;
 extern SDLErrorDomain *const SDLErrorDomainTransport;
-extern SDLErrorDomain *const SDLErrorDomainStore;
+extern SDLErrorDomain *const SDLErrorDomainRPCStore;
 
 @interface NSError (SDLErrors)
 
@@ -51,6 +51,7 @@ extern SDLErrorDomain *const SDLErrorDomainStore;
 + (NSError *)sdl_fileManager_fileDoesNotExistError;
 + (NSError *)sdl_fileManager_fileUploadCanceled;
 + (NSError *)sdl_fileManager_dataMissingError;
++ (NSError *)sdl_fileManager_staticIconError;
 
 #pragma mark Show Managers
 
@@ -76,7 +77,7 @@ extern SDLErrorDomain *const SDLErrorDomainStore;
 
 #pragma mark Store
 
-+ (NSError *)sdl_store_invalidObjectErrorWithObject:(id)wrongObject expectedType:(Class)type;
++ (NSError *)sdl_rpcStore_invalidObjectErrorWithObject:(id)wrongObject expectedType:(Class)type;
 
 @end
 

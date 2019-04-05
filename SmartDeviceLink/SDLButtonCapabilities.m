@@ -4,14 +4,14 @@
 #import "SDLButtonCapabilities.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLButtonCapabilities
 
 - (void)setName:(SDLButtonName)name {
-    [store sdl_setObject:name forName:SDLNameName];
+    [store sdl_setObject:name forName:SDLRPCParameterNameName];
 }
 
 - (SDLButtonName)name {
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setShortPressAvailable:(NSNumber<SDLBool> *)shortPressAvailable {
-    [store sdl_setObject:shortPressAvailable forName:SDLNameShortPressAvailable];
+    [store sdl_setObject:shortPressAvailable forName:SDLRPCParameterNameShortPressAvailable];
 }
 
 - (NSNumber<SDLBool> *)shortPressAvailable {
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLongPressAvailable:(NSNumber<SDLBool> *)longPressAvailable {
-    [store sdl_setObject:longPressAvailable forName:SDLNameLongPressAvailable];
+    [store sdl_setObject:longPressAvailable forName:SDLRPCParameterNameLongPressAvailable];
 }
 
 - (NSNumber<SDLBool> *)longPressAvailable {
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setUpDownAvailable:(NSNumber<SDLBool> *)upDownAvailable {
-    [store sdl_setObject:upDownAvailable forName:SDLNameUpDownAvailable];
+    [store sdl_setObject:upDownAvailable forName:SDLRPCParameterNameUpDownAvailable];
 }
 
 - (NSNumber<SDLBool> *)upDownAvailable {

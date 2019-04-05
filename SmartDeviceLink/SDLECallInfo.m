@@ -4,14 +4,14 @@
 #import "SDLECallInfo.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLECallInfo
 
 - (void)setECallNotificationStatus:(SDLVehicleDataNotificationStatus)eCallNotificationStatus {
-    [store sdl_setObject:eCallNotificationStatus forName:SDLNameECallNotificationStatus];
+    [store sdl_setObject:eCallNotificationStatus forName:SDLRPCParameterNameECallNotificationStatus];
 }
 
 - (SDLVehicleDataNotificationStatus)eCallNotificationStatus {
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAuxECallNotificationStatus:(SDLVehicleDataNotificationStatus)auxECallNotificationStatus {
-    [store sdl_setObject:auxECallNotificationStatus forName:SDLNameAuxECallNotificationStatus];
+    [store sdl_setObject:auxECallNotificationStatus forName:SDLRPCParameterNameAuxECallNotificationStatus];
 }
 
 - (SDLVehicleDataNotificationStatus)auxECallNotificationStatus {
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setECallConfirmationStatus:(SDLECallConfirmationStatus)eCallConfirmationStatus {
-    [store sdl_setObject:eCallConfirmationStatus forName:SDLNameECallConfirmationStatus];
+    [store sdl_setObject:eCallConfirmationStatus forName:SDLRPCParameterNameECallConfirmationStatus];
 }
 
 - (SDLECallConfirmationStatus)eCallConfirmationStatus {

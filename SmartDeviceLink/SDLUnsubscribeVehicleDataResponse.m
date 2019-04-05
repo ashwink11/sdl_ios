@@ -5,7 +5,8 @@
 #import "SDLUnsubscribeVehicleDataResponse.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLVehicleDataResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLUnsubscribeVehicleDataResponse
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameUnsubscribeVehicleData]) {
+    if (self = [super initWithName:SDLRPCFunctionNameUnsubscribeVehicleData]) {
     }
     return self;
 }
 
 - (void)setGps:(nullable SDLVehicleDataResult *)gps {
-    [parameters sdl_setObject:gps forName:SDLNameGPS];
+    [parameters sdl_setObject:gps forName:SDLRPCParameterNameGPS];
 }
 
 - (nullable SDLVehicleDataResult *)gps {
@@ -27,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSpeed:(nullable SDLVehicleDataResult *)speed {
-    [parameters sdl_setObject:speed forName:SDLNameSpeed];
+    [parameters sdl_setObject:speed forName:SDLRPCParameterNameSpeed];
 }
 
 - (nullable SDLVehicleDataResult *)speed {
@@ -35,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRpm:(nullable SDLVehicleDataResult *)rpm {
-    [parameters sdl_setObject:rpm forName:SDLNameRPM];
+    [parameters sdl_setObject:rpm forName:SDLRPCParameterNameRPM];
 }
 
 - (nullable SDLVehicleDataResult *)rpm {
@@ -43,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFuelLevel:(nullable SDLVehicleDataResult *)fuelLevel {
-    [parameters sdl_setObject:fuelLevel forName:SDLNameFuelLevel];
+    [parameters sdl_setObject:fuelLevel forName:SDLRPCParameterNameFuelLevel];
 }
 
 - (nullable SDLVehicleDataResult *)fuelLevel {
@@ -51,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFuelLevel_State:(nullable SDLVehicleDataResult *)fuelLevel_State {
-    [parameters sdl_setObject:fuelLevel_State forName:SDLNameFuelLevelState];
+    [parameters sdl_setObject:fuelLevel_State forName:SDLRPCParameterNameFuelLevelState];
 }
 
 - (nullable SDLVehicleDataResult *)fuelLevel_State {
@@ -59,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFuelRange:(nullable SDLVehicleDataResult *)fuelRange {
-    [parameters sdl_setObject:fuelRange forName:SDLNameFuelRange];
+    [parameters sdl_setObject:fuelRange forName:SDLRPCParameterNameFuelRange];
 }
 
 - (nullable SDLVehicleDataResult *)fuelRange {
@@ -67,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setInstantFuelConsumption:(nullable SDLVehicleDataResult *)instantFuelConsumption {
-    [parameters sdl_setObject:instantFuelConsumption forName:SDLNameInstantFuelConsumption];
+    [parameters sdl_setObject:instantFuelConsumption forName:SDLRPCParameterNameInstantFuelConsumption];
 }
 
 - (nullable SDLVehicleDataResult *)instantFuelConsumption {
@@ -75,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setExternalTemperature:(nullable SDLVehicleDataResult *)externalTemperature {
-    [parameters sdl_setObject:externalTemperature forName:SDLNameExternalTemperature];
+    [parameters sdl_setObject:externalTemperature forName:SDLRPCParameterNameExternalTemperature];
 }
 
 - (nullable SDLVehicleDataResult *)externalTemperature {
@@ -83,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPrndl:(nullable SDLVehicleDataResult *)prndl {
-    [parameters sdl_setObject:prndl forName:SDLNamePRNDL];
+    [parameters sdl_setObject:prndl forName:SDLRPCParameterNamePRNDL];
 }
 
 - (nullable SDLVehicleDataResult *)prndl {
@@ -91,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTirePressure:(nullable SDLVehicleDataResult *)tirePressure {
-    [parameters sdl_setObject:tirePressure forName:SDLNameTirePressure];
+    [parameters sdl_setObject:tirePressure forName:SDLRPCParameterNameTirePressure];
 }
 
 - (nullable SDLVehicleDataResult *)tirePressure {
@@ -99,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setOdometer:(nullable SDLVehicleDataResult *)odometer {
-    [parameters sdl_setObject:odometer forName:SDLNameOdometer];
+    [parameters sdl_setObject:odometer forName:SDLRPCParameterNameOdometer];
 }
 
 - (nullable SDLVehicleDataResult *)odometer {
@@ -107,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBeltStatus:(nullable SDLVehicleDataResult *)beltStatus {
-    [parameters sdl_setObject:beltStatus forName:SDLNameBeltStatus];
+    [parameters sdl_setObject:beltStatus forName:SDLRPCParameterNameBeltStatus];
 }
 
 - (nullable SDLVehicleDataResult *)beltStatus {
@@ -115,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBodyInformation:(nullable SDLVehicleDataResult *)bodyInformation {
-    [parameters sdl_setObject:bodyInformation forName:SDLNameBodyInformation];
+    [parameters sdl_setObject:bodyInformation forName:SDLRPCParameterNameBodyInformation];
 }
 
 - (nullable SDLVehicleDataResult *)bodyInformation {
@@ -123,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDeviceStatus:(nullable SDLVehicleDataResult *)deviceStatus {
-    [parameters sdl_setObject:deviceStatus forName:SDLNameDeviceStatus];
+    [parameters sdl_setObject:deviceStatus forName:SDLRPCParameterNameDeviceStatus];
 }
 
 - (nullable SDLVehicleDataResult *)deviceStatus {
@@ -131,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDriverBraking:(nullable SDLVehicleDataResult *)driverBraking {
-    [parameters sdl_setObject:driverBraking forName:SDLNameDriverBraking];
+    [parameters sdl_setObject:driverBraking forName:SDLRPCParameterNameDriverBraking];
 }
 
 - (nullable SDLVehicleDataResult *)driverBraking {
@@ -139,7 +140,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setWiperStatus:(nullable SDLVehicleDataResult *)wiperStatus {
-    [parameters sdl_setObject:wiperStatus forName:SDLNameWiperStatus];
+    [parameters sdl_setObject:wiperStatus forName:SDLRPCParameterNameWiperStatus];
 }
 
 - (nullable SDLVehicleDataResult *)wiperStatus {
@@ -147,7 +148,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHeadLampStatus:(nullable SDLVehicleDataResult *)headLampStatus {
-    [parameters sdl_setObject:headLampStatus forName:SDLNameHeadLampStatus];
+    [parameters sdl_setObject:headLampStatus forName:SDLRPCParameterNameHeadLampStatus];
 }
 
 - (nullable SDLVehicleDataResult *)headLampStatus {
@@ -155,7 +156,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEngineOilLife:(nullable SDLVehicleDataResult *)engineOilLife {
-    [parameters sdl_setObject:engineOilLife forName:SDLNameEngineOilLife];
+    [parameters sdl_setObject:engineOilLife forName:SDLRPCParameterNameEngineOilLife];
 }
 
 - (nullable SDLVehicleDataResult *)engineOilLife {
@@ -163,7 +164,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEngineTorque:(nullable SDLVehicleDataResult *)engineTorque {
-    [parameters sdl_setObject:engineTorque forName:SDLNameEngineTorque];
+    [parameters sdl_setObject:engineTorque forName:SDLRPCParameterNameEngineTorque];
 }
 
 - (nullable SDLVehicleDataResult *)engineTorque {
@@ -171,7 +172,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAccPedalPosition:(nullable SDLVehicleDataResult *)accPedalPosition {
-    [parameters sdl_setObject:accPedalPosition forName:SDLNameAccelerationPedalPosition];
+    [parameters sdl_setObject:accPedalPosition forName:SDLRPCParameterNameAccelerationPedalPosition];
 }
 
 - (nullable SDLVehicleDataResult *)accPedalPosition {
@@ -179,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSteeringWheelAngle:(nullable SDLVehicleDataResult *)steeringWheelAngle {
-    [parameters sdl_setObject:steeringWheelAngle forName:SDLNameSteeringWheelAngle];
+    [parameters sdl_setObject:steeringWheelAngle forName:SDLRPCParameterNameSteeringWheelAngle];
 }
 
 - (nullable SDLVehicleDataResult *)steeringWheelAngle {
@@ -187,7 +188,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setECallInfo:(nullable SDLVehicleDataResult *)eCallInfo {
-    [parameters sdl_setObject:eCallInfo forName:SDLNameECallInfo];
+    [parameters sdl_setObject:eCallInfo forName:SDLRPCParameterNameECallInfo];
 }
 
 - (nullable SDLVehicleDataResult *)eCallInfo {
@@ -195,7 +196,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAirbagStatus:(nullable SDLVehicleDataResult *)airbagStatus {
-    [parameters sdl_setObject:airbagStatus forName:SDLNameAirbagStatus];
+    [parameters sdl_setObject:airbagStatus forName:SDLRPCParameterNameAirbagStatus];
 }
 
 - (nullable SDLVehicleDataResult *)airbagStatus {
@@ -203,7 +204,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEmergencyEvent:(nullable SDLVehicleDataResult *)emergencyEvent {
-    [parameters sdl_setObject:emergencyEvent forName:SDLNameEmergencyEvent];
+    [parameters sdl_setObject:emergencyEvent forName:SDLRPCParameterNameEmergencyEvent];
 }
 
 - (nullable SDLVehicleDataResult *)emergencyEvent {
@@ -211,7 +212,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setClusterModes:(nullable SDLVehicleDataResult *)clusterModes {
-    [parameters sdl_setObject:clusterModes forName:SDLNameClusterModes];
+    [parameters sdl_setObject:clusterModes forName:SDLRPCParameterNameClusterModes];
 }
 
 - (nullable SDLVehicleDataResult *)clusterModes {
@@ -219,7 +220,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMyKey:(nullable SDLVehicleDataResult *)myKey {
-    [parameters sdl_setObject:myKey forName:SDLNameMyKey];
+    [parameters sdl_setObject:myKey forName:SDLRPCParameterNameMyKey];
 }
 
 - (nullable SDLVehicleDataResult *)myKey {
@@ -227,7 +228,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setElectronicParkBrakeStatus:(nullable SDLVehicleDataResult *)electronicParkBrakeStatus {
-    [parameters sdl_setObject:electronicParkBrakeStatus forName:SDLNameElectronicParkBrakeStatus];
+    [parameters sdl_setObject:electronicParkBrakeStatus forName:SDLRPCParameterNameElectronicParkBrakeStatus];
 }
 
 - (nullable SDLVehicleDataResult *)electronicParkBrakeStatus {
@@ -235,11 +236,19 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTurnSignal:(nullable SDLVehicleDataResult *)turnSignal {
-    [parameters sdl_setObject:turnSignal forName:SDLNameTurnSignal];
+    [parameters sdl_setObject:turnSignal forName:SDLRPCParameterNameTurnSignal];
 }
 
 - (nullable SDLVehicleDataResult *)turnSignal {
     return [parameters sdl_objectForName:SDLRPCParameterNameTurnSignal ofClass:SDLVehicleDataResult.class error:nil];
+}
+
+- (void)setCloudAppVehicleID:(nullable SDLVehicleDataResult *)cloudAppVehicleID {
+    [parameters sdl_setObject:cloudAppVehicleID forName:SDLRPCParameterNameCloudAppVehicleID];
+}
+
+- (nullable SDLVehicleDataResult *)cloudAppVehicleID {
+    return [parameters sdl_objectForName:SDLRPCParameterNameCloudAppVehicleID ofClass:SDLVehicleDataResult.class error:nil];
 }
 
 @end

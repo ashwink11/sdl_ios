@@ -5,14 +5,15 @@
 #import "SDLReadDID.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLReadDID
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameReadDID]) {
+    if (self = [super initWithName:SDLRPCFunctionNameReadDID]) {
     }
     return self;
 }
@@ -30,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEcuName:(NSNumber<SDLInt> *)ecuName {
-    [parameters sdl_setObject:ecuName forName:SDLNameECUName];
+    [parameters sdl_setObject:ecuName forName:SDLRPCParameterNameECUName];
 }
 
 - (NSNumber<SDLInt> *)ecuName {
@@ -39,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDidLocation:(NSArray<NSNumber<SDLInt> *> *)didLocation {
-    [parameters sdl_setObject:didLocation forName:SDLNameDIDLocation];
+    [parameters sdl_setObject:didLocation forName:SDLRPCParameterNameDIDLocation];
 }
 
 - (NSArray<NSNumber<SDLInt> *> *)didLocation {

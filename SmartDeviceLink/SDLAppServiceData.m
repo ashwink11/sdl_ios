@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLAppServiceData
 
-- (instancetype)initWithServiceType:(NSString *)serviceType serviceId:(NSString *)serviceId {
+- (instancetype)initWithAppServiceType:(SDLAppServiceType)serviceType serviceId:(NSString *)serviceId {
     self = [super init];
     if (!self) {
         return nil;
@@ -31,12 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
-- (instancetype)initWithAppServiceType:(SDLAppServiceType)serviceType serviceId:(NSString *)serviceId {
-    return [self initWithServiceType:serviceType serviceId:serviceId];
-}
-
 - (instancetype)initWithMediaServiceData:(SDLMediaServiceData *)mediaServiceData serviceId:(NSString *)serviceId {
-    self = [self initWithServiceType:SDLAppServiceTypeMedia serviceId:serviceId];
+    self = [self initWithAppServiceType:SDLAppServiceTypeMedia serviceId:serviceId];
     if (!self) {
         return nil;
     }
@@ -47,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (instancetype)initWithWeatherServiceData:(SDLWeatherServiceData *)weatherServiceData serviceId:(NSString *)serviceId {
-    self = [self initWithServiceType:SDLAppServiceTypeWeather serviceId:serviceId];
+    self = [self initWithAppServiceType:SDLAppServiceTypeWeather serviceId:serviceId];
     if (!self) {
         return nil;
     }
@@ -58,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (instancetype)initWithNavigationServiceData:(SDLNavigationServiceData *)navigationServiceData serviceId:(NSString *)serviceId {
-    self = [self initWithServiceType:SDLAppServiceTypeNavigation serviceId:serviceId];
+    self = [self initWithAppServiceType:SDLAppServiceTypeNavigation serviceId:serviceId];
     if (!self) {
         return nil;
     }
@@ -68,8 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
-- (instancetype)initWithServiceType:(NSString *)serviceType serviceId:(NSString *)serviceId mediaServiceData:(nullable SDLMediaServiceData *)mediaServiceData weatherServiceData:(nullable SDLWeatherServiceData *)weatherServiceData navigationServiceData:(nullable SDLNavigationServiceData *)navigationServiceData {
-    self = [self initWithServiceType:serviceType serviceId:serviceId];
+- (instancetype)initWithAppServiceType:(SDLAppServiceType)serviceType serviceId:(NSString *)serviceId mediaServiceData:(nullable SDLMediaServiceData *)mediaServiceData weatherServiceData:(nullable SDLWeatherServiceData *)weatherServiceData navigationServiceData:(nullable SDLNavigationServiceData *)navigationServiceData {
+    self = [self initWithAppServiceType:serviceType serviceId:serviceId];
     if (!self) {
         return nil;
     }
@@ -86,7 +82,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)serviceType {
-    return [store sdl_objectForName:SDLRPCParameterNameServiceType ofClass:NSString.class error:nil];
+    NSError *error = nil;
+    return [store sdl_objectForName:SDLRPCParameterNameServiceType ofClass:NSString.class error:&error];
 }
 
 - (void)setServiceId:(NSString *)serviceId {
@@ -94,7 +91,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSString *)serviceId {
-    return [store sdl_objectForName:SDLRPCParameterNameServiceID ofClass:NSString.class error:nil];
+    NSError *error = nil;
+    return [store sdl_objectForName:SDLRPCParameterNameServiceID ofClass:NSString.class error:&error];
 }
 
 - (void)setWeatherServiceData:(nullable SDLWeatherServiceData *)weatherServiceData {

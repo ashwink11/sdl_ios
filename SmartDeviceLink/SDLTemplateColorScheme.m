@@ -9,7 +9,7 @@
 #import "SDLTemplateColorScheme.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLRGBColor.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPrimaryColor:(nullable SDLRGBColor *)primaryColor {
-    [store sdl_setObject:primaryColor forName:SDLNamePrimaryColor];
+    [store sdl_setObject:primaryColor forName:SDLRPCParameterNamePrimaryColor];
 }
 
 - (nullable SDLRGBColor *)primaryColor {
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSecondaryColor:(nullable SDLRGBColor *)secondaryColor {
-    [store sdl_setObject:secondaryColor forName:SDLNameSecondaryColor];
+    [store sdl_setObject:secondaryColor forName:SDLRPCParameterNameSecondaryColor];
 }
 
 - (nullable SDLRGBColor *)secondaryColor {
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBackgroundColor:(nullable SDLRGBColor *)backgroundColor {
-    [store sdl_setObject:backgroundColor forName:SDLNameBackgroundColor];
+    [store sdl_setObject:backgroundColor forName:SDLRPCParameterNameBackgroundColor];
 }
 
 - (nullable SDLRGBColor *)backgroundColor {

@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHardware:(nullable NSString *)hardware {
-    [store sdl_setObject:hardware forName:SDLNameHardware];
+    [store sdl_setObject:hardware forName:SDLRPCParameterNameHardware];
 }
 
 - (nullable NSString *)hardware {
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFirmwareRev:(nullable NSString *)firmwareRev {
-    [store sdl_setObject:firmwareRev forName:SDLNameFirmwareRevision];
+    [store sdl_setObject:firmwareRev forName:SDLRPCParameterNameFirmwareRevision];
 }
 
 - (nullable NSString *)firmwareRev {
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setOs:(nullable NSString *)os {
-    [store sdl_setObject:os forName:SDLNameOS];
+    [store sdl_setObject:os forName:SDLRPCParameterNameOS];
 }
 
 - (nullable NSString *)os {
@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setOsVersion:(nullable NSString *)osVersion {
-    [store sdl_setObject:osVersion forName:SDLNameOSVersion];
+    [store sdl_setObject:osVersion forName:SDLRPCParameterNameOSVersion];
 }
 
 - (nullable NSString *)osVersion {
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCarrier:(nullable NSString *)carrier {
-    [store sdl_setObject:carrier forName:SDLNameCarrier];
+    [store sdl_setObject:carrier forName:SDLRPCParameterNameCarrier];
 }
 
 - (nullable NSString *)carrier {
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMaxNumberRFCOMMPorts:(nullable NSNumber<SDLInt> *)maxNumberRFCOMMPorts {
-    [store sdl_setObject:maxNumberRFCOMMPorts forName:SDLNameMaxNumberRFCOMMPorts];
+    [store sdl_setObject:maxNumberRFCOMMPorts forName:SDLRPCParameterNameMaxNumberRFCOMMPorts];
 }
 
 - (nullable NSNumber<SDLInt> *)maxNumberRFCOMMPorts {

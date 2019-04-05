@@ -4,20 +4,21 @@
 #import "SDLOnSystemRequest.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLOnSystemRequest
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameOnSystemRequest]) {
+    if (self = [super initWithName:SDLRPCFunctionNameOnSystemRequest]) {
     }
     return self;
 }
 
 - (void)setRequestType:(SDLRequestType)requestType {
-    [parameters sdl_setObject:requestType forName:SDLNameRequestType];
+    [parameters sdl_setObject:requestType forName:SDLRPCParameterNameRequestType];
 }
 
 - (SDLRequestType)requestType {
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRequestSubType:(nullable NSString *)requestSubType {
-    [parameters sdl_setObject:requestSubType forName:SDLNameRequestSubType];
+    [parameters sdl_setObject:requestSubType forName:SDLRPCParameterNameRequestSubType];
 }
 
 - (nullable NSString *)requestSubType {
@@ -34,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setUrl:(nullable NSString *)url {
-    [parameters sdl_setObject:url forName:SDLNameURL];
+    [parameters sdl_setObject:url forName:SDLRPCParameterNameURL];
 }
 
 - (nullable NSString *)url {
@@ -42,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTimeout:(nullable NSNumber<SDLInt> *)timeout {
-    [parameters sdl_setObject:timeout forName:SDLNameTimeout];
+    [parameters sdl_setObject:timeout forName:SDLRPCParameterNameTimeout];
 }
 
 - (nullable NSNumber<SDLInt> *)timeout {
@@ -50,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFileType:(nullable SDLFileType)fileType {
-    [parameters sdl_setObject:fileType forName:SDLNameFileType];
+    [parameters sdl_setObject:fileType forName:SDLRPCParameterNameFileType];
 }
 
 - (nullable SDLFileType)fileType {
@@ -58,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setOffset:(nullable NSNumber<SDLInt> *)offset {
-    [parameters sdl_setObject:offset forName:SDLNameOffset];
+    [parameters sdl_setObject:offset forName:SDLRPCParameterNameOffset];
 }
 
 - (nullable NSNumber<SDLInt> *)offset {
@@ -66,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLength:(nullable NSNumber<SDLInt> *)length {
-    [parameters sdl_setObject:length forName:SDLNameLength];
+    [parameters sdl_setObject:length forName:SDLRPCParameterNameLength];
 }
 
 - (nullable NSNumber<SDLInt> *)length {

@@ -5,7 +5,7 @@
 
 #import "SDLStationIDNumber.h"
 #import "SDLGPSData.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStationShortName:(nullable NSString *)stationShortName {
-    [store sdl_setObject:stationShortName forName:SDLNameStationShortName];
+    [store sdl_setObject:stationShortName forName:SDLRPCParameterNameStationShortName];
 }
 
 - (nullable NSString *)stationShortName {
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStationIDNumber:(nullable SDLStationIDNumber *)stationIDNumber {
-    [store sdl_setObject:stationIDNumber forName:SDLNameStationIDNumber];
+    [store sdl_setObject:stationIDNumber forName:SDLRPCParameterNameStationIDNumber];
 }
 
 - (nullable SDLStationIDNumber *)stationIDNumber {
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStationLongName:(nullable NSString *)stationLongName {
-    [store sdl_setObject:stationLongName forName:SDLNameStationLongName];
+    [store sdl_setObject:stationLongName forName:SDLRPCParameterNameStationLongName];
 }
 
 - (nullable NSString *)stationLongName {
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStationLocation:(nullable SDLGPSData *)stationLocation {
-    [store sdl_setObject:stationLocation forName:SDLNameStationLocation];
+    [store sdl_setObject:stationLocation forName:SDLRPCParameterNameStationLocation];
 }
 
 - (nullable SDLGPSData *)stationLocation {
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStationMessage:(nullable NSString *)stationMessage {
-    [store sdl_setObject:stationMessage forName:SDLNameStationMessage];
+    [store sdl_setObject:stationMessage forName:SDLRPCParameterNameStationMessage];
 }
 
 - (nullable NSString *)stationMessage {

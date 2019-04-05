@@ -9,7 +9,8 @@
 #import <Nimble/Nimble.h>
 
 #import "SDLEncodedSyncPData.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 QuickSpecBegin(SDLEncodedSyncPDataSpec)
 

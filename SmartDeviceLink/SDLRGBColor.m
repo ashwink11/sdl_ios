@@ -9,7 +9,7 @@
 #import "SDLRGBColor.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Setters
 
 - (void)setRed:(NSNumber<SDLInt> *)red {
-    [store sdl_setObject:red forName:SDLNameRed];
+    [store sdl_setObject:red forName:SDLRPCParameterNameRed];
 }
 
 - (NSNumber<SDLInt> *)red {
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setGreen:(NSNumber<SDLInt> *)green {
-    [store sdl_setObject:green forName:SDLNameGreen];
+    [store sdl_setObject:green forName:SDLRPCParameterNameGreen];
 }
 
 - (NSNumber<SDLInt> *)green {
@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBlue:(NSNumber<SDLInt> *)blue {
-    [store sdl_setObject:blue forName:SDLNameBlue];
+    [store sdl_setObject:blue forName:SDLRPCParameterNameBlue];
 }
 
 - (NSNumber<SDLInt> *)blue {

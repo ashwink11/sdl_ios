@@ -5,14 +5,14 @@
 #import "SDLVehicleType.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLVehicleType
 
 - (void)setMake:(nullable NSString *)make {
-    [store sdl_setObject:make forName:SDLNameMake];
+    [store sdl_setObject:make forName:SDLRPCParameterNameMake];
 }
 
 - (nullable NSString *)make {
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setModel:(nullable NSString *)model {
-    [store sdl_setObject:model forName:SDLNameModel];
+    [store sdl_setObject:model forName:SDLRPCParameterNameModel];
 }
 
 - (nullable NSString *)model {
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setModelYear:(nullable NSString *)modelYear {
-    [store sdl_setObject:modelYear forName:SDLNameModelYear];
+    [store sdl_setObject:modelYear forName:SDLRPCParameterNameModelYear];
 }
 
 - (nullable NSString *)modelYear {
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTrim:(nullable NSString *)trim {
-    [store sdl_setObject:trim forName:SDLNameTrim];
+    [store sdl_setObject:trim forName:SDLRPCParameterNameTrim];
 }
 
 - (nullable NSString *)trim {

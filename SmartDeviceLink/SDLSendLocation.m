@@ -5,17 +5,34 @@
 #import "SDLSendLocation.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLSendLocation
 
 - (instancetype)init {
-    self = [super initWithName:SDLNameSendLocation];
+    self = [super initWithName:SDLRPCFunctionNameSendLocation];
     if (!self) {
         return nil;
     }
+
+    return self;
+}
+
+- (instancetype)initWithAddress:(SDLOasisAddress *)address addressLines:(nullable NSArray<NSString *> *)addressLines locationName:(nullable NSString *)locationName locationDescription:(nullable NSString *)locationDescription phoneNumber:(nullable NSString *)phoneNumber image:(nullable SDLImage *)image deliveryMode:(nullable SDLDeliveryMode)deliveryMode timeStamp:(nullable SDLDateTime *)timeStamp {
+    self = [self init];
+    if (!self) { return nil; }
+
+    self.address = address;
+    self.addressLines = addressLines;
+    self.locationName = locationName;
+    self.locationDescription = locationDescription;
+    self.phoneNumber = phoneNumber;
+    self.locationImage = image;
+    self.deliveryMode = deliveryMode;
+    self.timeStamp = timeStamp;
 
     return self;
 }
@@ -45,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLongitudeDegrees:(nullable NSNumber<SDLFloat> *)longitudeDegrees {
-    [parameters sdl_setObject:longitudeDegrees forName:SDLNameLongitudeDegrees];
+    [parameters sdl_setObject:longitudeDegrees forName:SDLRPCParameterNameLongitudeDegrees];
 }
 
 - (nullable NSNumber<SDLFloat> *)longitudeDegrees {
@@ -53,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLatitudeDegrees:(nullable NSNumber<SDLFloat> *)latitudeDegrees {
-    [parameters sdl_setObject:latitudeDegrees forName:SDLNameLatitudeDegrees];
+    [parameters sdl_setObject:latitudeDegrees forName:SDLRPCParameterNameLatitudeDegrees];
 }
 
 - (nullable NSNumber<SDLFloat> *)latitudeDegrees {
@@ -61,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLocationName:(nullable NSString *)locationName {
-    [parameters sdl_setObject:locationName forName:SDLNameLocationName];
+    [parameters sdl_setObject:locationName forName:SDLRPCParameterNameLocationName];
 }
 
 - (nullable NSString *)locationName {
@@ -69,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAddressLines:(nullable NSArray<NSString *> *)addressLines {
-    [parameters sdl_setObject:addressLines forName:SDLNameAddressLines];
+    [parameters sdl_setObject:addressLines forName:SDLRPCParameterNameAddressLines];
 }
 
 - (nullable NSString *)locationDescription {
@@ -77,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLocationDescription:(nullable NSString *)locationDescription {
-    [parameters sdl_setObject:locationDescription forName:SDLNameLocationDescription];
+    [parameters sdl_setObject:locationDescription forName:SDLRPCParameterNameLocationDescription];
 }
 
 - (nullable NSArray<NSString *> *)addressLines {
@@ -85,7 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPhoneNumber:(nullable NSString *)phoneNumber {
-    [parameters sdl_setObject:phoneNumber forName:SDLNamePhoneNumber];
+    [parameters sdl_setObject:phoneNumber forName:SDLRPCParameterNamePhoneNumber];
 }
 
 - (nullable NSString *)phoneNumber {
@@ -93,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLocationImage:(nullable SDLImage *)locationImage {
-    [parameters sdl_setObject:locationImage forName:SDLNameLocationImage];
+    [parameters sdl_setObject:locationImage forName:SDLRPCParameterNameLocationImage];
 }
 
 - (nullable SDLImage *)locationImage {
@@ -101,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDeliveryMode:(nullable SDLDeliveryMode)deliveryMode {
-    [parameters sdl_setObject:deliveryMode forName:SDLNameDeliveryMode];
+    [parameters sdl_setObject:deliveryMode forName:SDLRPCParameterNameDeliveryMode];
 }
 
 - (nullable SDLDeliveryMode)deliveryMode {
@@ -109,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTimeStamp:(nullable SDLDateTime *)timeStamp {
-    [parameters sdl_setObject:timeStamp forName:SDLNameLocationTimeStamp];
+    [parameters sdl_setObject:timeStamp forName:SDLRPCParameterNameTimeStamp];
 }
 
 - (nullable SDLDateTime *)timeStamp {
@@ -117,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAddress:(nullable SDLOasisAddress *)address {
-    [parameters sdl_setObject:address forName:SDLNameAddress];
+    [parameters sdl_setObject:address forName:SDLRPCParameterNameAddress];
 }
 
 - (nullable SDLOasisAddress *)address {

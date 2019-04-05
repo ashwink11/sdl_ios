@@ -4,7 +4,7 @@
 #import "SDLOasisAddress.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCountryName:(nullable NSString *)countryName {
-    [store sdl_setObject:countryName forName:SDLNameCountryName];
+    [store sdl_setObject:countryName forName:SDLRPCParameterNameCountryName];
 }
 
 - (nullable NSString *)countryName {
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCountryCode:(nullable NSString *)countryCode {
-    [store sdl_setObject:countryCode forName:SDLNameCountryCode];
+    [store sdl_setObject:countryCode forName:SDLRPCParameterNameCountryCode];
 }
 
 - (nullable NSString *)countryCode {
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPostalCode:(nullable NSString *)postalCode {
-    [store sdl_setObject:postalCode forName:SDLNamePostalCode];
+    [store sdl_setObject:postalCode forName:SDLRPCParameterNamePostalCode];
 }
 
 - (nullable NSString *)postalCode {
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAdministrativeArea:(nullable NSString *)administrativeArea {
-    [store sdl_setObject:administrativeArea forName:SDLNameAdministrativeArea];
+    [store sdl_setObject:administrativeArea forName:SDLRPCParameterNameAdministrativeArea];
 }
 
 - (nullable NSString *)administrativeArea {
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSubAdministrativeArea:(nullable NSString *)subAdministrativeArea {
-    [store sdl_setObject:subAdministrativeArea forName:SDLNameSubAdministrativeArea];
+    [store sdl_setObject:subAdministrativeArea forName:SDLRPCParameterNameSubAdministrativeArea];
 }
 
 - (nullable NSString *)subAdministrativeArea {
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLocality:(nullable NSString *)locality {
-    [store sdl_setObject:locality forName:SDLNameLocality];
+    [store sdl_setObject:locality forName:SDLRPCParameterNameLocality];
 }
 
 - (nullable NSString *)locality {
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSubLocality:(nullable NSString *)subLocality {
-    [store sdl_setObject:subLocality forName:SDLNameSubLocality];
+    [store sdl_setObject:subLocality forName:SDLRPCParameterNameSubLocality];
 }
 
 - (nullable NSString *)subLocality {
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setThoroughfare:(nullable NSString *)thoroughfare {
-    [store sdl_setObject:thoroughfare forName:SDLNameThoroughfare];
+    [store sdl_setObject:thoroughfare forName:SDLRPCParameterNameThoroughfare];
 }
 
 - (nullable NSString *)thoroughfare {
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSubThoroughfare:(nullable NSString *)subThoroughfare {
-    [store sdl_setObject:subThoroughfare forName:SDLNameSubThoroughfare];
+    [store sdl_setObject:subThoroughfare forName:SDLRPCParameterNameSubThoroughfare];
 }
 
 - (nullable NSString *)subThoroughfare {

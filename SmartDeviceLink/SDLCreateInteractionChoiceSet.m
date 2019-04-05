@@ -6,14 +6,15 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLChoice.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLCreateInteractionChoiceSet
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameCreateInteractionChoiceSet]) {
+    if (self = [super initWithName:SDLRPCFunctionNameCreateInteractionChoiceSet]) {
     }
     return self;
 }
@@ -30,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setInteractionChoiceSetID:(NSNumber<SDLInt> *)interactionChoiceSetID {
-    [parameters sdl_setObject:interactionChoiceSetID forName:SDLNameInteractionChoiceSetId];
+    [parameters sdl_setObject:interactionChoiceSetID forName:SDLRPCParameterNameInteractionChoiceSetId];
 }
 
 - (NSNumber<SDLInt> *)interactionChoiceSetID {
@@ -39,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setChoiceSet:(NSArray<SDLChoice *> *)choiceSet {
-    [parameters sdl_setObject:choiceSet forName:SDLNameChoiceSet];
+    [parameters sdl_setObject:choiceSet forName:SDLRPCParameterNameChoiceSet];
 }
 
 - (NSArray<SDLChoice *> *)choiceSet {

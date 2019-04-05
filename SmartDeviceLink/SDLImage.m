@@ -4,7 +4,7 @@
 #import "SDLImage.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Getters / Setters
 
 - (void)setValue:(NSString *)value {
-    [store sdl_setObject:value forName:SDLNameValue];
+    [store sdl_setObject:value forName:SDLRPCParameterNameValue];
 }
 
 - (NSString *)value {
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImageType:(SDLImageType)imageType {
-    [store sdl_setObject:imageType forName:SDLNameImageType];
+    [store sdl_setObject:imageType forName:SDLRPCParameterNameImageType];
 }
 
 - (SDLImageType)imageType {
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setIsTemplate:(NSNumber<SDLBool> *)isTemplate {
-    [store sdl_setObject:isTemplate forName:SDLNameImageTemplate];
+    [store sdl_setObject:isTemplate forName:SDLRPCParameterNameImageTemplate];
 }
 
 - (NSNumber<SDLBool> *)isTemplate {

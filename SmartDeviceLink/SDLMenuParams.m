@@ -5,7 +5,7 @@
 #import "SDLMenuParams.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setParentID:(nullable NSNumber<SDLInt> *)parentID {
-    [store sdl_setObject:parentID forName:SDLNameParentId];
+    [store sdl_setObject:parentID forName:SDLRPCParameterNameParentId];
 }
 
 - (nullable NSNumber<SDLInt> *)parentID {
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPosition:(nullable NSNumber<SDLInt> *)position {
-    [store sdl_setObject:position forName:SDLNamePosition];
+    [store sdl_setObject:position forName:SDLRPCParameterNamePosition];
 }
 
 - (nullable NSNumber<SDLInt> *)position {
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMenuName:(NSString *)menuName {
-    [store sdl_setObject:menuName forName:SDLNameMenuName];
+    [store sdl_setObject:menuName forName:SDLRPCParameterNameMenuName];
 }
 
 - (NSString *)menuName {

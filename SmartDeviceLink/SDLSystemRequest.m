@@ -5,14 +5,15 @@
 #import "SDLSystemRequest.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLSystemRequest
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameSystemRequest]) {
+    if (self = [super initWithName:SDLRPCFunctionNameSystemRequest]) {
     }
     return self;
 }
@@ -41,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRequestType:(SDLRequestType)requestType {
-    [parameters sdl_setObject:requestType forName:SDLNameRequestType];
+    [parameters sdl_setObject:requestType forName:SDLRPCParameterNameRequestType];
 }
 
 - (SDLRequestType)requestType {
@@ -50,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRequestSubType:(nullable NSString *)requestSubType {
-    [parameters sdl_setObject:requestSubType forName:SDLNameRequestSubType];
+    [parameters sdl_setObject:requestSubType forName:SDLRPCParameterNameRequestSubType];
 }
 
 - (nullable NSString *)requestSubType {
@@ -58,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFileName:(nullable NSString *)fileName {
-    [parameters sdl_setObject:fileName forName:SDLNameFilename];
+    [parameters sdl_setObject:fileName forName:SDLRPCParameterNameFilename];
 }
 
 - (nullable NSString *)fileName {

@@ -5,12 +5,13 @@
 #import "SDLDialNumber.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 @implementation SDLDialNumber
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameDialNumber]) {
+    if (self = [super initWithName:SDLRPCFunctionNameDialNumber]) {
     }
     return self;
 }
@@ -27,7 +28,7 @@
 }
 
 - (void)setNumber:(NSString *)number {
-    [parameters sdl_setObject:number forName:SDLNameNumber];
+    [parameters sdl_setObject:number forName:SDLRPCParameterNameNumber];
 }
 
 - (NSString *)number {

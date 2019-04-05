@@ -5,7 +5,8 @@
 #import "SDLChangeRegistration.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLTTSChunk.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLChangeRegistration
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameChangeRegistration]) {
+    if (self = [super initWithName:SDLRPCFunctionNameChangeRegistration]) {
     }
     return self;
 }
@@ -44,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLanguage:(SDLLanguage)language {
-    [parameters sdl_setObject:language forName:SDLNameLanguage];
+    [parameters sdl_setObject:language forName:SDLRPCParameterNameLanguage];
 }
 
 - (SDLLanguage)language {
@@ -53,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHmiDisplayLanguage:(SDLLanguage )hmiDisplayLanguage {
-    [parameters sdl_setObject:hmiDisplayLanguage forName:SDLNameHMIDisplayLanguage];
+    [parameters sdl_setObject:hmiDisplayLanguage forName:SDLRPCParameterNameHMIDisplayLanguage];
 }
 
 - (SDLLanguage)hmiDisplayLanguage {
@@ -62,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppName:(nullable NSString *)appName {
-    [parameters sdl_setObject:appName forName:SDLNameAppName];
+    [parameters sdl_setObject:appName forName:SDLRPCParameterNameAppName];
 }
 
 - (nullable NSString *)appName {
@@ -70,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTtsName:(nullable NSArray<SDLTTSChunk *> *)ttsName {
-    [parameters sdl_setObject:ttsName forName:SDLNameTTSName];
+    [parameters sdl_setObject:ttsName forName:SDLRPCParameterNameTTSName];
 }
 
 - (nullable NSArray<SDLTTSChunk *> *)ttsName {
@@ -78,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNgnMediaScreenAppName:(nullable NSString *)ngnMediaScreenAppName {
-    [parameters sdl_setObject:ngnMediaScreenAppName forName:SDLNameNGNMediaScreenAppName];
+    [parameters sdl_setObject:ngnMediaScreenAppName forName:SDLRPCParameterNameNGNMediaScreenAppName];
 }
 
 - (nullable NSString *)ngnMediaScreenAppName {
@@ -86,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVrSynonyms:(nullable NSArray<NSString *> *)vrSynonyms {
-    [parameters sdl_setObject:vrSynonyms forName:SDLNameVRSynonyms];
+    [parameters sdl_setObject:vrSynonyms forName:SDLRPCParameterNameVRSynonyms];
 }
 
 - (nullable NSArray<NSString *> *)vrSynonyms {

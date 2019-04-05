@@ -5,7 +5,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLImage.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNavigationText:(nullable NSString *)navigationText {
-    [store sdl_setObject:navigationText forName:SDLNameNavigationText];
+    [store sdl_setObject:navigationText forName:SDLRPCParameterNameNavigationText];
 }
 
 - (nullable NSString *)navigationText {
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTurnIcon:(nullable SDLImage *)turnIcon {
-    [store sdl_setObject:turnIcon forName:SDLNameTurnIcon];
+    [store sdl_setObject:turnIcon forName:SDLRPCParameterNameTurnIcon];
 }
 
 - (nullable SDLImage *)turnIcon {

@@ -3,7 +3,7 @@
 //
 
 #import "SDLRDSData.h"
-#include "SDLNames.h"
+#include "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setProgramService:(nullable NSString *)programService {
-    [store sdl_setObject:programService forName:SDLNameProgramService];
+    [store sdl_setObject:programService forName:SDLRPCParameterNameProgramService];
 }
 
 - (nullable NSString *)programService {
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRadioText:(nullable NSString *)radioText {
-    [store sdl_setObject:radioText forName:SDLNameRadioText];
+    [store sdl_setObject:radioText forName:SDLRPCParameterNameRadioText];
 }
 
 - (nullable NSString *)radioText {
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setClockText:(nullable NSString *)clockText {
-    [store sdl_setObject:clockText forName:SDLNameClockText];
+    [store sdl_setObject:clockText forName:SDLRPCParameterNameClockText];
 }
 
 - (nullable NSString *)clockText {
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setProgramIdentification:(nullable NSString *)programIdentification {
-    [store sdl_setObject:programIdentification forName:SDLNameProgramIdentification];
+    [store sdl_setObject:programIdentification forName:SDLRPCParameterNameProgramIdentification];
 }
 
 - (nullable NSString *)programIdentification {
@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setProgramType:(nullable NSNumber<SDLInt> *)programType {
-    [store sdl_setObject:programType forName:SDLNameProgramType];
+    [store sdl_setObject:programType forName:SDLRPCParameterNameProgramType];
 }
 
 - (nullable NSNumber<SDLInt> *)programType {
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTrafficProgramIdentification:(nullable NSNumber<SDLBool> *)trafficProgramIdentification {
-    [store sdl_setObject:trafficProgramIdentification forName:SDLNameTrafficProgramIdentification];
+    [store sdl_setObject:trafficProgramIdentification forName:SDLRPCParameterNameTrafficProgramIdentification];
 }
 
 - (nullable NSNumber<SDLBool> *)trafficProgramIdentification {
@@ -75,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTrafficAnnouncementIdentification:(nullable NSNumber<SDLBool> *)trafficAnnouncementIdentification {
-    [store sdl_setObject:trafficAnnouncementIdentification forName:SDLNameTrafficAnnouncementIdentification];
+    [store sdl_setObject:trafficAnnouncementIdentification forName:SDLRPCParameterNameTrafficAnnouncementIdentification];
 }
 
 - (nullable NSNumber<SDLBool> *)trafficAnnouncementIdentification {
@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRegion:(nullable NSString *)region {
-    [store sdl_setObject:region forName:SDLNameRegion];
+    [store sdl_setObject:region forName:SDLRPCParameterNameRegion];
 }
 
 - (nullable NSString *)region {

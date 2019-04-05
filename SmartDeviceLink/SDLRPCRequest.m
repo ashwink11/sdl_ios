@@ -5,7 +5,7 @@
 #import "SDLRPCRequest.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCorrelationID:(NSNumber<SDLInt> *)corrID {
-    [function sdl_setObject:corrID forName:SDLNameCorrelationId];
+    [function sdl_setObject:corrID forName:SDLRPCParameterNameCorrelationId];
 }
 
 @end

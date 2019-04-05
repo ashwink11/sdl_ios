@@ -2,7 +2,7 @@
 //
 
 #import "SDLHMISettingsControlData.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDisplayMode:(nullable SDLDisplayMode)displayMode {
-    [store sdl_setObject:displayMode forName:SDLNameDisplayMode];
+    [store sdl_setObject:displayMode forName:SDLRPCParameterNameDisplayMode];
 }
 
 - (nullable SDLDisplayMode)displayMode {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDistanceUnit:(nullable SDLDistanceUnit)distanceUnit {
-    [store sdl_setObject:distanceUnit forName:SDLNameDistanceUnit];
+    [store sdl_setObject:distanceUnit forName:SDLRPCParameterNameDistanceUnit];
 }
 
 - (nullable SDLDistanceUnit)distanceUnit {
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTemperatureUnit:(nullable SDLTemperatureUnit)temperatureUnit {
-    [store sdl_setObject:temperatureUnit forName:SDLNameTemperatureUnit];
+    [store sdl_setObject:temperatureUnit forName:SDLRPCParameterNameTemperatureUnit];
 }
 
 - (nullable SDLTemperatureUnit)temperatureUnit {

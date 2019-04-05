@@ -4,7 +4,7 @@
 #import "SDLKeyboardProperties.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLanguage:(nullable SDLLanguage)language {
-    [store sdl_setObject:language forName:SDLNameLanguage];
+    [store sdl_setObject:language forName:SDLRPCParameterNameLanguage];
 }
 
 - (nullable SDLLanguage)language {
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setKeyboardLayout:(nullable SDLKeyboardLayout)keyboardLayout {
-    [store sdl_setObject:keyboardLayout forName:SDLNameKeyboardLayout];
+    [store sdl_setObject:keyboardLayout forName:SDLRPCParameterNameKeyboardLayout];
 }
 
 - (nullable SDLKeyboardLayout)keyboardLayout {
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setKeypressMode:(nullable SDLKeypressMode)keypressMode {
-    [store sdl_setObject:keypressMode forName:SDLNameKeypressMode];
+    [store sdl_setObject:keypressMode forName:SDLRPCParameterNameKeypressMode];
 }
 
 - (nullable SDLKeypressMode)keypressMode {
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLimitedCharacterList:(nullable NSArray<NSString *> *)limitedCharacterList {
-    [store sdl_setObject:limitedCharacterList forName:SDLNameLimitedCharacterList];
+    [store sdl_setObject:limitedCharacterList forName:SDLRPCParameterNameLimitedCharacterList];
 }
 
 - (nullable NSArray<NSString *> *)limitedCharacterList {
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAutoCompleteText:(nullable NSString *)autoCompleteText {
-    [store sdl_setObject:autoCompleteText forName:SDLNameAutoCompleteText];
+    [store sdl_setObject:autoCompleteText forName:SDLRPCParameterNameAutoCompleteText];
 }
 
 - (nullable NSString *)autoCompleteText {

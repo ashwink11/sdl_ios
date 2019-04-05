@@ -11,7 +11,7 @@
 #import "SDLRadioControlCapabilities.h"
 #import "SDLSeatControlCapabilities.h"
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setClimateControlCapabilities:(nullable NSArray<SDLClimateControlCapabilities *> *)climateControlCapabilities {
-    [store sdl_setObject:climateControlCapabilities forName:SDLNameClimateControlCapabilities];
+    [store sdl_setObject:climateControlCapabilities forName:SDLRPCParameterNameClimateControlCapabilities];
 }
 
 - (nullable NSArray<SDLClimateControlCapabilities *> *)climateControlCapabilities {
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 -(void)setRadioControlCapabilities:(nullable NSArray<SDLRadioControlCapabilities *> *)radioControlCapabilities {
-    [store sdl_setObject:radioControlCapabilities forName:SDLNameRadioControlCapabilities ];
+    [store sdl_setObject:radioControlCapabilities forName:SDLRPCParameterNameRadioControlCapabilities ];
 }
 
 - (nullable NSArray<SDLRadioControlCapabilities *> *)radioControlCapabilities {
@@ -56,14 +56,14 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setButtonCapabilities:(nullable NSArray<SDLButtonCapabilities *> *)buttonCapabilities {
-    [store sdl_setObject:buttonCapabilities forName:SDLNameButtonCapabilities];}
+    [store sdl_setObject:buttonCapabilities forName:SDLRPCParameterNameButtonCapabilities];}
 
 - (nullable NSArray<SDLButtonCapabilities *> *)buttonCapabilities {
     return [store sdl_objectsForName:SDLRPCParameterNameButtonCapabilities ofClass:SDLButtonCapabilities.class error:nil];
 }
 
 - (void)setSeatControlCapabilities:(nullable NSArray<SDLSeatControlCapabilities *> *)seatControlCapabilities {
-    [store sdl_setObject:seatControlCapabilities forName:SDLNameSeatControlCapabilities];
+    [store sdl_setObject:seatControlCapabilities forName:SDLRPCParameterNameSeatControlCapabilities];
 }
 
 - (nullable NSArray<SDLSeatControlCapabilities *> *)seatControlCapabilities {
@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioControlCapabilities:(nullable NSArray<SDLAudioControlCapabilities *> *)audioControlCapabilities {
-    [store sdl_setObject:audioControlCapabilities forName:SDLNameAudioControlCapabilities];
+    [store sdl_setObject:audioControlCapabilities forName:SDLRPCParameterNameAudioControlCapabilities];
 }
 
 - (nullable NSArray<SDLAudioControlCapabilities *> *)audioControlCapabilities {
@@ -80,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHmiSettingsControlCapabilities:(nullable NSArray<SDLHMISettingsControlCapabilities *> *)hmiSettingsControlCapabilities {
-    [store sdl_setObject:hmiSettingsControlCapabilities forName:SDLNameHmiSettingsControlCapabilities];
+    [store sdl_setObject:hmiSettingsControlCapabilities forName:SDLRPCParameterNameHmiSettingsControlCapabilities];
 }
 
 - (nullable NSArray<SDLHMISettingsControlCapabilities *> *)hmiSettingsControlCapabilities {
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLightControlCapabilities:(nullable NSArray<SDLLightControlCapabilities *> *)lightControlCapabilities {
-    [store sdl_setObject:lightControlCapabilities forName:SDLNameLightControlCapabilities];
+    [store sdl_setObject:lightControlCapabilities forName:SDLRPCParameterNameLightControlCapabilities];
 }
 
 - (nullable NSArray<SDLLightControlCapabilities *> *)lightControlCapabilities {

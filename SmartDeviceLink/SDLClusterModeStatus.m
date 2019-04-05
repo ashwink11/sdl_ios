@@ -4,14 +4,14 @@
 #import "SDLClusterModeStatus.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLClusterModeStatus
 
 - (void)setPowerModeActive:(NSNumber<SDLBool> *)powerModeActive {
-    [store sdl_setObject:powerModeActive forName:SDLNamePowerModeActive];
+    [store sdl_setObject:powerModeActive forName:SDLRPCParameterNamePowerModeActive];
 }
 
 - (NSNumber<SDLBool> *)powerModeActive {
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPowerModeQualificationStatus:(SDLPowerModeQualificationStatus)powerModeQualificationStatus {
-    [store sdl_setObject:powerModeQualificationStatus forName:SDLNamePowerModeQualificationStatus];
+    [store sdl_setObject:powerModeQualificationStatus forName:SDLRPCParameterNamePowerModeQualificationStatus];
 }
 
 - (SDLPowerModeQualificationStatus)powerModeQualificationStatus {
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCarModeStatus:(SDLCarModeStatus)carModeStatus {
-    [store sdl_setObject:carModeStatus forName:SDLNameCarModeStatus];
+    [store sdl_setObject:carModeStatus forName:SDLRPCParameterNameCarModeStatus];
 }
 
 - (SDLCarModeStatus)carModeStatus {
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPowerModeStatus:(SDLPowerModeStatus)powerModeStatus {
-    [store sdl_setObject:powerModeStatus forName:SDLNamePowerModeStatus];
+    [store sdl_setObject:powerModeStatus forName:SDLRPCParameterNamePowerModeStatus];
 }
 
 - (SDLPowerModeStatus)powerModeStatus {

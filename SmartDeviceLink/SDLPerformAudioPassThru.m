@@ -5,7 +5,8 @@
 #import "SDLPerformAudioPassThru.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLTTSChunk.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLPerformAudioPassThru
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNamePerformAudioPassThru]) {
+    if (self = [super initWithName:SDLRPCFunctionNamePerformAudioPassThru]) {
     }
     return self;
 }
@@ -57,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
     
 
 - (void)setInitialPrompt:(nullable NSArray<SDLTTSChunk *> *)initialPrompt {
-    [parameters sdl_setObject:initialPrompt forName:SDLNameInitialPrompt];
+    [parameters sdl_setObject:initialPrompt forName:SDLRPCParameterNameInitialPrompt];
 }
 
 - (nullable NSArray<SDLTTSChunk *> *)initialPrompt {
@@ -65,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioPassThruDisplayText1:(nullable NSString *)audioPassThruDisplayText1 {
-    [parameters sdl_setObject:audioPassThruDisplayText1 forName:SDLNameAudioPassThruDisplayText1];
+    [parameters sdl_setObject:audioPassThruDisplayText1 forName:SDLRPCParameterNameAudioPassThruDisplayText1];
 }
 
 - (nullable NSString *)audioPassThruDisplayText1 {
@@ -73,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioPassThruDisplayText2:(nullable NSString *)audioPassThruDisplayText2 {
-    [parameters sdl_setObject:audioPassThruDisplayText2 forName:SDLNameAudioPassThruDisplayText2];
+    [parameters sdl_setObject:audioPassThruDisplayText2 forName:SDLRPCParameterNameAudioPassThruDisplayText2];
 }
 
 - (nullable NSString *)audioPassThruDisplayText2 {
@@ -81,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSamplingRate:(SDLSamplingRate)samplingRate {
-    [parameters sdl_setObject:samplingRate forName:SDLNameSamplingRate];
+    [parameters sdl_setObject:samplingRate forName:SDLRPCParameterNameSamplingRate];
 }
 
 - (SDLSamplingRate)samplingRate {
@@ -90,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMaxDuration:(NSNumber<SDLInt> *)maxDuration {
-    [parameters sdl_setObject:maxDuration forName:SDLNameMaxDuration];
+    [parameters sdl_setObject:maxDuration forName:SDLRPCParameterNameMaxDuration];
 }
 
 - (NSNumber<SDLInt> *)maxDuration {
@@ -99,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBitsPerSample:(SDLBitsPerSample)bitsPerSample {
-    [parameters sdl_setObject:bitsPerSample forName:SDLNameBitsPerSample];
+    [parameters sdl_setObject:bitsPerSample forName:SDLRPCParameterNameBitsPerSample];
 }
 
 - (SDLBitsPerSample)bitsPerSample {
@@ -108,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioType:(SDLAudioType)audioType {
-    [parameters sdl_setObject:audioType forName:SDLNameAudioType];
+    [parameters sdl_setObject:audioType forName:SDLRPCParameterNameAudioType];
 }
 
 - (SDLAudioType)audioType {
@@ -117,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMuteAudio:(nullable NSNumber<SDLBool> *)muteAudio {
-    [parameters sdl_setObject:muteAudio forName:SDLNameMuteAudio];
+    [parameters sdl_setObject:muteAudio forName:SDLRPCParameterNameMuteAudio];
 }
 
 - (nullable NSNumber<SDLBool> *)muteAudio {

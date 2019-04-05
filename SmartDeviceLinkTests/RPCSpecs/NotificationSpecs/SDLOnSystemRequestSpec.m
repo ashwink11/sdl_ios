@@ -9,7 +9,8 @@
 #import <Nimble/Nimble.h>
 
 #import "SDLFileType.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLOnSystemRequest.h"
 #import "SDLRequestType.h"
 

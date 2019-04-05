@@ -5,7 +5,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLDeviceLevelStatus.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLPrimaryAudioSource.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLDeviceStatus
 
 - (void)setVoiceRecOn:(NSNumber<SDLBool> *)voiceRecOn {
-    [store sdl_setObject:voiceRecOn forName:SDLNameVoiceRecognitionOn];
+    [store sdl_setObject:voiceRecOn forName:SDLRPCParameterNameVoiceRecognitionOn];
 }
 
 - (NSNumber<SDLBool> *)voiceRecOn {
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBtIconOn:(NSNumber<SDLBool> *)btIconOn {
-    [store sdl_setObject:btIconOn forName:SDLNameBluetoothIconOn];
+    [store sdl_setObject:btIconOn forName:SDLRPCParameterNameBluetoothIconOn];
 }
 
 - (NSNumber<SDLBool> *)btIconOn {
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCallActive:(NSNumber<SDLBool> *)callActive {
-    [store sdl_setObject:callActive forName:SDLNameCallActive];
+    [store sdl_setObject:callActive forName:SDLRPCParameterNameCallActive];
 }
 
 - (NSNumber<SDLBool> *)callActive {
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPhoneRoaming:(NSNumber<SDLBool> *)phoneRoaming {
-    [store sdl_setObject:phoneRoaming forName:SDLNamePhoneRoaming];
+    [store sdl_setObject:phoneRoaming forName:SDLRPCParameterNamePhoneRoaming];
 }
 
 - (NSNumber<SDLBool> *)phoneRoaming {
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTextMsgAvailable:(NSNumber<SDLBool> *)textMsgAvailable {
-    [store sdl_setObject:textMsgAvailable forName:SDLNameTextMessageAvailable];
+    [store sdl_setObject:textMsgAvailable forName:SDLRPCParameterNameTextMessageAvailable];
 }
 
 - (NSNumber<SDLBool> *)textMsgAvailable {
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBattLevelStatus:(SDLDeviceLevelStatus )battLevelStatus {
-    [store sdl_setObject:battLevelStatus forName:SDLNameBatteryLevelStatus];
+    [store sdl_setObject:battLevelStatus forName:SDLRPCParameterNameBatteryLevelStatus];
 }
 
 - (SDLDeviceLevelStatus)battLevelStatus {
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStereoAudioOutputMuted:(NSNumber<SDLBool> *)stereoAudioOutputMuted {
-    [store sdl_setObject:stereoAudioOutputMuted forName:SDLNameStereoAudioOutputMuted];
+    [store sdl_setObject:stereoAudioOutputMuted forName:SDLRPCParameterNameStereoAudioOutputMuted];
 }
 
 - (NSNumber<SDLBool> *)stereoAudioOutputMuted {
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMonoAudioOutputMuted:(NSNumber<SDLBool> *)monoAudioOutputMuted {
-    [store sdl_setObject:monoAudioOutputMuted forName:SDLNameMonoAudioOutputMuted];
+    [store sdl_setObject:monoAudioOutputMuted forName:SDLRPCParameterNameMonoAudioOutputMuted];
 }
 
 - (NSNumber<SDLBool> *)monoAudioOutputMuted {
@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSignalLevelStatus:(SDLDeviceLevelStatus)signalLevelStatus {
-    [store sdl_setObject:signalLevelStatus forName:SDLNameSignalLevelStatus];
+    [store sdl_setObject:signalLevelStatus forName:SDLRPCParameterNameSignalLevelStatus];
 }
 
 - (SDLDeviceLevelStatus)signalLevelStatus {
@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPrimaryAudioSource:(SDLPrimaryAudioSource)primaryAudioSource {
-    [store sdl_setObject:primaryAudioSource forName:SDLNamePrimaryAudioSource];
+    [store sdl_setObject:primaryAudioSource forName:SDLRPCParameterNamePrimaryAudioSource];
 }
 
 - (SDLPrimaryAudioSource)primaryAudioSource {
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setECallEventActive:(NSNumber<SDLBool> *)eCallEventActive {
-    [store sdl_setObject:eCallEventActive forName:SDLNameECallEventActive];
+    [store sdl_setObject:eCallEventActive forName:SDLRPCParameterNameECallEventActive];
 }
 
 - (NSNumber<SDLBool> *)eCallEventActive {

@@ -5,7 +5,8 @@
 #import "SDLUpdateTurnList.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSoftButton.h"
 #import "SDLTurn.h"
 
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLUpdateTurnList
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameUpdateTurnList]) {
+    if (self = [super initWithName:SDLRPCFunctionNameUpdateTurnList]) {
     }
     return self;
 }
@@ -32,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTurnList:(nullable NSArray<SDLTurn *> *)turnList {
-    [parameters sdl_setObject:turnList forName:SDLNameTurnList];
+    [parameters sdl_setObject:turnList forName:SDLRPCParameterNameTurnList];
 }
 
 - (nullable NSArray<SDLTurn *> *)turnList {
@@ -40,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSoftButtons:(nullable NSArray<SDLSoftButton *> *)softButtons {
-    [parameters sdl_setObject:softButtons forName:SDLNameSoftButtons];
+    [parameters sdl_setObject:softButtons forName:SDLRPCParameterNameSoftButtons];
 }
 
 - (nullable NSArray<SDLSoftButton *> *)softButtons {

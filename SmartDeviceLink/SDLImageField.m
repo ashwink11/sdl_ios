@@ -6,14 +6,14 @@
 #import "NSMutableDictionary+Store.h"
 #import "SDLImageFieldName.h"
 #import "SDLImageResolution.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLImageField
 
 - (void)setName:(SDLImageFieldName)name {
-    [store sdl_setObject:name forName:SDLNameName];
+    [store sdl_setObject:name forName:SDLRPCParameterNameName];
 }
 
 - (SDLImageFieldName)name {
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImageTypeSupported:(NSArray<SDLFileType> *)imageTypeSupported {
-    [store sdl_setObject:imageTypeSupported forName:SDLNameImageTypeSupported];
+    [store sdl_setObject:imageTypeSupported forName:SDLRPCParameterNameImageTypeSupported];
 }
 
 - (NSArray<SDLFileType> *)imageTypeSupported {
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImageResolution:(nullable SDLImageResolution *)imageResolution {
-    [store sdl_setObject:imageResolution forName:SDLNameImageResolution];
+    [store sdl_setObject:imageResolution forName:SDLRPCParameterNameImageResolution];
 }
 
 - (nullable SDLImageResolution *)imageResolution {

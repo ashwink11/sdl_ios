@@ -8,7 +8,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLHapticRect.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLRectangle.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setId:(NSNumber<SDLInt> *)id {
-    [store sdl_setObject:id forName:SDLNameId];
+    [store sdl_setObject:id forName:SDLRPCParameterNameId];
 }
 
 - (NSNumber<SDLInt> *)id {
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRect:(SDLRectangle *)rect {
-    [store sdl_setObject:rect forName:SDLNameRect];
+    [store sdl_setObject:rect forName:SDLRPCParameterNameRect];
 }
 
 - (SDLRectangle *)rect {

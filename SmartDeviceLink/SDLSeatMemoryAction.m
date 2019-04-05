@@ -2,7 +2,7 @@
 //
 
 #import "SDLSeatMemoryAction.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setId:(NSNumber<SDLInt> *)id {
-    [store sdl_setObject:id forName:SDLNameId];
+    [store sdl_setObject:id forName:SDLRPCParameterNameId];
 }
 
 - (NSNumber<SDLInt> *)id {
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLabel:(nullable NSString *)label {
-    [store sdl_setObject:label forName:SDLNameLabel];
+    [store sdl_setObject:label forName:SDLRPCParameterNameLabel];
 }
 
 - (nullable NSString *)label {
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAction:(SDLSeatMemoryActionType)action {
-    [store sdl_setObject:action forName:SDLNameAction];
+    [store sdl_setObject:action forName:SDLRPCParameterNameAction];
 }
 
 - (SDLSeatMemoryActionType)action {

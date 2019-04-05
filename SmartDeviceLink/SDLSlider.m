@@ -5,14 +5,15 @@
 #import "SDLSlider.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLSlider
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameSlider]) {
+    if (self = [super initWithName:SDLRPCFunctionNameSlider]) {
     }
     return self;
 }
@@ -52,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNumTicks:(NSNumber<SDLInt> *)numTicks {
-    [parameters sdl_setObject:numTicks forName:SDLNameNumberTicks];
+    [parameters sdl_setObject:numTicks forName:SDLRPCParameterNameNumberTicks];
 }
 
 - (NSNumber<SDLInt> *)numTicks {
@@ -61,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPosition:(NSNumber<SDLInt> *)position {
-    [parameters sdl_setObject:position forName:SDLNamePosition];
+    [parameters sdl_setObject:position forName:SDLRPCParameterNamePosition];
 }
 
 - (NSNumber<SDLInt> *)position {
@@ -70,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSliderHeader:(NSString *)sliderHeader {
-    [parameters sdl_setObject:sliderHeader forName:SDLNameSliderHeader];
+    [parameters sdl_setObject:sliderHeader forName:SDLRPCParameterNameSliderHeader];
 }
 
 - (NSString *)sliderHeader {
@@ -79,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSliderFooter:(nullable NSArray<NSString *> *)sliderFooter {
-    [parameters sdl_setObject:sliderFooter forName:SDLNameSliderFooter];
+    [parameters sdl_setObject:sliderFooter forName:SDLRPCParameterNameSliderFooter];
 }
 
 - (nullable NSArray<NSString *> *)sliderFooter {
@@ -87,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTimeout:(nullable NSNumber<SDLInt> *)timeout {
-    [parameters sdl_setObject:timeout forName:SDLNameTimeout];
+    [parameters sdl_setObject:timeout forName:SDLRPCParameterNameTimeout];
 }
 
 - (nullable NSNumber<SDLInt> *)timeout {

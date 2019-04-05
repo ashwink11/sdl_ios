@@ -7,7 +7,8 @@
 //
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSendHapticData.h"
 #import "SDLHapticRect.h"
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLSendHapticData
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameSendHapticData]) {
+    if (self = [super initWithName:SDLRPCFunctionNameSendHapticData]) {
     }
     return self;
 }
@@ -33,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHapticRectData:(nullable NSArray<SDLHapticRect *> *)hapticRectData {
-    [parameters sdl_setObject:hapticRectData forName:SDLNameHapticRectData];
+    [parameters sdl_setObject:hapticRectData forName:SDLRPCParameterNameHapticRectData];
 }
 
 - (nullable NSArray<SDLHapticRect *> *)hapticRectData {

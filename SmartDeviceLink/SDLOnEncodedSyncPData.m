@@ -4,20 +4,21 @@
 #import "SDLOnEncodedSyncPData.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLOnEncodedSyncPData
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameOnEncodedSyncPData]) {
+    if (self = [super initWithName:SDLRPCFunctionNameOnEncodedSyncPData]) {
     }
     return self;
 }
 
 - (void)setData:(NSArray<NSString *> *)data {
-    [parameters sdl_setObject:data forName:SDLNameData];
+    [parameters sdl_setObject:data forName:SDLRPCParameterNameData];
 }
 
 - (NSArray<NSString *> *)data {
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setURL:(nullable NSString *)URL {
-    [parameters sdl_setObject:URL forName:SDLNameURLUppercase];
+    [parameters sdl_setObject:URL forName:SDLRPCParameterNameURLUppercase];
 }
 
 - (nullable NSString *)URL {
@@ -34,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTimeout:(nullable NSNumber<SDLInt> *)Timeout {
-    [parameters sdl_setObject:Timeout forName:SDLNameTimeoutCapitalized];
+    [parameters sdl_setObject:Timeout forName:SDLRPCParameterNameTimeoutCapitalized];
 }
 
 - (nullable NSNumber<SDLInt> *)Timeout {

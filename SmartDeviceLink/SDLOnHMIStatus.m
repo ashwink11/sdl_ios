@@ -6,7 +6,8 @@
 #import "NSMutableDictionary+Store.h"
 #import "SDLAudioStreamingState.h"
 #import "SDLHMILevel.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSystemContext.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -14,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation SDLOnHMIStatus
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameOnHMIStatus]) {
+    if (self = [super initWithName:SDLRPCFunctionNameOnHMIStatus]) {
     }
     return self;
 }
 
 - (void)setHmiLevel:(SDLHMILevel)hmiLevel {
-    [parameters sdl_setObject:hmiLevel forName:SDLNameHMILevel];
+    [parameters sdl_setObject:hmiLevel forName:SDLRPCParameterNameHMILevel];
 }
 
 - (SDLHMILevel)hmiLevel {
@@ -29,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioStreamingState:(SDLAudioStreamingState)audioStreamingState {
-    [parameters sdl_setObject:audioStreamingState forName:SDLNameAudioStreamingState];
+    [parameters sdl_setObject:audioStreamingState forName:SDLRPCParameterNameAudioStreamingState];
 }
 
 - (SDLAudioStreamingState)audioStreamingState {
@@ -38,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVideoStreamingState:(nullable SDLVideoStreamingState)videoStreamingState {
-    [parameters sdl_setObject:videoStreamingState forName:SDLNameVideoStreamingState];
+    [parameters sdl_setObject:videoStreamingState forName:SDLRPCParameterNameVideoStreamingState];
 }
 
 - (nullable SDLVideoStreamingState)videoStreamingState {
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSystemContext:(SDLSystemContext)systemContext {
-    [parameters sdl_setObject:systemContext forName:SDLNameSystemContext];
+    [parameters sdl_setObject:systemContext forName:SDLRPCParameterNameSystemContext];
 }
 
 - (SDLSystemContext)systemContext {

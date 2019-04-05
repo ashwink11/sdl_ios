@@ -11,7 +11,8 @@
 #import "SDLGlobals.h"
 #import "SDLLanguage.h"
 #import "SDLLifecycleConfiguration.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 #import "SDLSyncMsgVersion.h"
 #import "SDLTemplateColorScheme.h"
 #import "SDLTTSChunk.h"
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Lifecycle
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameRegisterAppInterface]) {
+    if (self = [super initWithName:SDLRPCFunctionNameRegisterAppInterface]) {
     }
     return self;
 }
@@ -116,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Getters and Setters
 
 - (void)setSyncMsgVersion:(SDLSyncMsgVersion *)syncMsgVersion {
-    [parameters sdl_setObject:syncMsgVersion forName:SDLNameSyncMessageVersion];
+    [parameters sdl_setObject:syncMsgVersion forName:SDLRPCParameterNameSyncMessageVersion];
 }
 
 - (SDLSyncMsgVersion *)syncMsgVersion {
@@ -124,7 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppName:(NSString *)appName {
-    [parameters sdl_setObject:appName forName:SDLNameAppName];
+    [parameters sdl_setObject:appName forName:SDLRPCParameterNameAppName];
 }
 
 - (NSString *)appName {
@@ -133,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTtsName:(nullable NSArray<SDLTTSChunk *> *)ttsName {
-    [parameters sdl_setObject:ttsName forName:SDLNameTTSName];
+    [parameters sdl_setObject:ttsName forName:SDLRPCParameterNameTTSName];
 }
 
 - (nullable NSArray<SDLTTSChunk *> *)ttsName {
@@ -141,7 +142,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNgnMediaScreenAppName:(nullable NSString *)ngnMediaScreenAppName {
-    [parameters sdl_setObject:ngnMediaScreenAppName forName:SDLNameNGNMediaScreenAppName];
+    [parameters sdl_setObject:ngnMediaScreenAppName forName:SDLRPCParameterNameNGNMediaScreenAppName];
 }
 
 - (nullable NSString *)ngnMediaScreenAppName {
@@ -149,7 +150,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVrSynonyms:(nullable NSArray<NSString *> *)vrSynonyms {
-    [parameters sdl_setObject:vrSynonyms forName:SDLNameVRSynonyms];
+    [parameters sdl_setObject:vrSynonyms forName:SDLRPCParameterNameVRSynonyms];
 }
 
 - (nullable NSArray<NSString *> *)vrSynonyms {
@@ -157,7 +158,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setIsMediaApplication:(NSNumber<SDLBool> *)isMediaApplication {
-    [parameters sdl_setObject:isMediaApplication forName:SDLNameIsMediaApplication];
+    [parameters sdl_setObject:isMediaApplication forName:SDLRPCParameterNameIsMediaApplication];
 }
 
 - (NSNumber<SDLBool> *)isMediaApplication {
@@ -166,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setLanguageDesired:(SDLLanguage)languageDesired {
-    [parameters sdl_setObject:languageDesired forName:SDLNameLanguageDesired];
+    [parameters sdl_setObject:languageDesired forName:SDLRPCParameterNameLanguageDesired];
 }
 
 - (SDLLanguage)languageDesired {
@@ -175,7 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHmiDisplayLanguageDesired:(SDLLanguage)hmiDisplayLanguageDesired {
-    [parameters sdl_setObject:hmiDisplayLanguageDesired forName:SDLNameHMIDisplayLanguageDesired];
+    [parameters sdl_setObject:hmiDisplayLanguageDesired forName:SDLRPCParameterNameHMIDisplayLanguageDesired];
 }
 
 - (SDLLanguage)hmiDisplayLanguageDesired {
@@ -184,7 +185,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppHMIType:(nullable NSArray<SDLAppHMIType> *)appHMIType {
-    [parameters sdl_setObject:appHMIType forName:SDLNameAppHMIType];
+    [parameters sdl_setObject:appHMIType forName:SDLRPCParameterNameAppHMIType];
 }
 
 - (nullable NSArray<SDLAppHMIType> *)appHMIType {
@@ -192,7 +193,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHashID:(nullable NSString *)hashID {
-    [parameters sdl_setObject:hashID forName:SDLNameHashId];
+    [parameters sdl_setObject:hashID forName:SDLRPCParameterNameHashId];
 }
 
 - (nullable NSString *)hashID {
@@ -200,7 +201,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDeviceInfo:(nullable SDLDeviceInfo *)deviceInfo {
-    [parameters sdl_setObject:deviceInfo forName:SDLNameDeviceInfo];
+    [parameters sdl_setObject:deviceInfo forName:SDLRPCParameterNameDeviceInfo];
 }
 
 - (nullable SDLDeviceInfo *)deviceInfo {
@@ -208,7 +209,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppID:(NSString *)appID {
-    [parameters sdl_setObject:appID forName:SDLNameAppId];
+    [parameters sdl_setObject:appID forName:SDLRPCParameterNameAppId];
 }
 
 - (NSString *)appID {
@@ -217,7 +218,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFullAppID:(nullable NSString *)fullAppID {
-    [parameters sdl_setObject:fullAppID forName:SDLNameFullAppID];
+    [parameters sdl_setObject:fullAppID forName:SDLRPCParameterNameFullAppID];
 }
 
 - (nullable NSString *)fullAppID {
@@ -225,7 +226,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAppInfo:(nullable SDLAppInfo *)appInfo {
-    [parameters sdl_setObject:appInfo forName:SDLNameAppInfo];
+    [parameters sdl_setObject:appInfo forName:SDLRPCParameterNameAppInfo];
 }
 
 - (nullable SDLAppInfo *)appInfo {
@@ -233,7 +234,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDayColorScheme:(nullable SDLTemplateColorScheme *)dayColorScheme {
-    [parameters sdl_setObject:dayColorScheme forName:SDLNameDayColorScheme];
+    [parameters sdl_setObject:dayColorScheme forName:SDLRPCParameterNameDayColorScheme];
 }
 
 - (nullable SDLTemplateColorScheme *)dayColorScheme {
@@ -241,7 +242,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNightColorScheme:(nullable SDLTemplateColorScheme *)nightColorScheme {
-    [parameters sdl_setObject:nightColorScheme forName:SDLNameNightColorScheme];
+    [parameters sdl_setObject:nightColorScheme forName:SDLRPCParameterNameNightColorScheme];
 }
 
 - (nullable SDLTemplateColorScheme *)nightColorScheme {

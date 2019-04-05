@@ -2,7 +2,7 @@
 //
 
 #import "SDLAudioControlCapabilities.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setModuleName:(NSString *)moduleName {
-    [store sdl_setObject:moduleName forName:SDLNameModuleName];
+    [store sdl_setObject:moduleName forName:SDLRPCParameterNameModuleName];
 }
 
 - (NSString *)moduleName {
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSourceAvailable:(nullable NSNumber<SDLBool> *)sourceAvailable {
-    [store sdl_setObject:sourceAvailable forName:SDLNameSourceAvailable];
+    [store sdl_setObject:sourceAvailable forName:SDLRPCParameterNameSourceAvailable];
 }
 
 - (nullable NSNumber<SDLBool> *)sourceAvailable {
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setKeepContextAvailable:(nullable NSNumber<SDLBool> *)keepContextAvailable {
-    [store sdl_setObject:keepContextAvailable forName:SDLNameKeepContextAvailable];
+    [store sdl_setObject:keepContextAvailable forName:SDLRPCParameterNameKeepContextAvailable];
 }
 
 - (nullable NSNumber<SDLBool> *)keepContextAvailable {
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVolumeAvailable:(nullable NSNumber<SDLBool> *)volumeAvailable {
-    [store sdl_setObject:volumeAvailable forName:SDLNameVolumeAvailable];
+    [store sdl_setObject:volumeAvailable forName:SDLRPCParameterNameVolumeAvailable];
 }
 
 - (nullable NSNumber<SDLBool> *)volumeAvailable {
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEqualizerAvailable:(nullable NSNumber<SDLBool> *)equalizerAvailable {
-    [store sdl_setObject:equalizerAvailable forName:SDLNameEqualizerAvailable];
+    [store sdl_setObject:equalizerAvailable forName:SDLRPCParameterNameEqualizerAvailable];
 }
 
 - (nullable NSNumber<SDLBool> *)equalizerAvailable {
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setEqualizerMaxChannelId:(nullable NSNumber<SDLInt> *)equalizerMaxChannelId {
-    [store sdl_setObject:equalizerMaxChannelId forName:SDLNameEqualizerMaxChannelId];
+    [store sdl_setObject:equalizerMaxChannelId forName:SDLRPCParameterNameEqualizerMaxChannelId];
 }
 
 - (nullable NSNumber<SDLInt> *)equalizerMaxChannelId {

@@ -19,7 +19,7 @@ SDLErrorDomain *const SDLErrorDomainSoftButtonManager = @"com.sdl.softbuttonmana
 SDLErrorDomain *const SDLErrorDomainMenuManager = @"com.sdl.menumanager.error";
 SDLErrorDomain *const SDLErrorDomainChoiceSetManager = @"com.sdl.choicesetmanager.error";
 SDLErrorDomain *const SDLErrorDomainTransport = @"com.sdl.transport.error";
-SDLErrorDomain *const SDLErrorDomainStore = @"com.sdl.rpcStore.error";
+SDLErrorDomain *const SDLErrorDomainRPCStore = @"com.sdl.rpcStore.error";
 
 @implementation NSError (SDLErrors)
 
@@ -178,6 +178,15 @@ SDLErrorDomain *const SDLErrorDomainStore = @"com.sdl.rpcStore.error";
     return [NSError errorWithDomain:SDLErrorDomainFileManager code:SDLFileManagerErrorFileDataMissing userInfo:userInfo];
 }
 
++ (NSError *)sdl_fileManager_staticIconError {
+    NSDictionary<NSString *, NSString *> *userInfo = @{
+                                                       NSLocalizedDescriptionKey: NSLocalizedString(@"The file upload was canceled", nil),
+                                                       NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"The file is a static icon, which cannot be uploaded", nil),
+                                                       NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Stop trying to upload a static icon, set it via the screen manager or create an SDLImage instead", nil)
+                                                       };
+    return [NSError errorWithDomain:SDLErrorDomainFileManager code:SDLFileManagerErrorStaticIcon userInfo:userInfo];
+}
+
 #pragma mark SDLUploadFileOperation
 
 + (NSError *)sdl_fileManager_fileDoesNotExistError {
@@ -259,13 +268,15 @@ SDLErrorDomain *const SDLErrorDomainStore = @"com.sdl.rpcStore.error";
 
 #pragma mark Store
 
-+ (NSError *)sdl_store_invalidObjectErrorWithObject:(id)wrongObject expectedType:(Class)type {
+
++ (NSError *)sdl_rpcStore_invalidObjectErrorWithObject:(id)wrongObject expectedType:(Class)type {
     NSDictionary<NSString *, NSString *> *userInfo = @{
                                                        NSLocalizedDescriptionKey: NSLocalizedString(@"Type of stored value doesn't match with requested", nil),
                                                        NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:@"Requested %@ but returned %@", NSStringFromClass(type), NSStringFromClass([wrongObject class])],
                                                        NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Check the object type returned from the head unit system", nil)
                                                        };
-    return [NSError errorWithDomain:SDLErrorDomainStore code:SDLRPCStoreErrorGetInvalidObject userInfo:userInfo];
+
+    return [NSError errorWithDomain:SDLErrorDomainRPCStore code:SDLRPCStoreErrorGetInvalidObject userInfo:userInfo];
 }
 
 @end

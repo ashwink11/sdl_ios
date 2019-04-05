@@ -5,14 +5,15 @@
 #import "SDLDiagnosticMessage.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLDiagnosticMessage
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameDiagnosticMessage]) {
+    if (self = [super initWithName:SDLRPCFunctionNameDiagnosticMessage]) {
     }
     return self;
 }
@@ -31,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTargetID:(NSNumber<SDLInt> *)targetID {
-    [parameters sdl_setObject:targetID forName:SDLNameTargetId];
+    [parameters sdl_setObject:targetID forName:SDLRPCParameterNameTargetId];
 }
 
 - (NSNumber<SDLInt> *)targetID {
@@ -40,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMessageLength:(NSNumber<SDLInt> *)messageLength {
-    [parameters sdl_setObject:messageLength forName:SDLNameMessageLength];
+    [parameters sdl_setObject:messageLength forName:SDLRPCParameterNameMessageLength];
 }
 
 - (NSNumber<SDLInt> *)messageLength {
@@ -49,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMessageData:(NSArray<NSNumber<SDLInt> *> *)messageData {
-    [parameters sdl_setObject:messageData forName:SDLNameMessageData];
+    [parameters sdl_setObject:messageData forName:SDLRPCParameterNameMessageData];
 }
 
 - (NSArray<NSNumber<SDLInt> *> *)messageData {

@@ -5,7 +5,7 @@
 
 #import "NSMutableDictionary+Store.h"
 #import "SDLImage.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setChoiceID:(NSNumber<SDLInt> *)choiceID {
-    [store sdl_setObject:choiceID forName:SDLNameChoiceId];
+    [store sdl_setObject:choiceID forName:SDLRPCParameterNameChoiceId];
 }
 
 - (NSNumber<SDLInt> *)choiceID {
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMenuName:(NSString *)menuName {
-    [store sdl_setObject:menuName forName:SDLNameMenuName];
+    [store sdl_setObject:menuName forName:SDLRPCParameterNameMenuName];
 }
 
 - (NSString *)menuName {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVrCommands:(nullable NSArray<NSString *> *)vrCommands {
-    [store sdl_setObject:vrCommands forName:SDLNameVRCommands];
+    [store sdl_setObject:vrCommands forName:SDLRPCParameterNameVRCommands];
 }
 
 - (nullable NSArray<NSString *> *)vrCommands {
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setImage:(nullable SDLImage *)image {
-    [store sdl_setObject:image forName:SDLNameImage];
+    [store sdl_setObject:image forName:SDLRPCParameterNameImage];
 }
 
 - (nullable SDLImage *)image {
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSecondaryText:(nullable NSString *)secondaryText {
-    [store sdl_setObject:secondaryText forName:SDLNameSecondaryText];
+    [store sdl_setObject:secondaryText forName:SDLRPCParameterNameSecondaryText];
 }
 
 - (nullable NSString *)secondaryText {
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTertiaryText:(nullable NSString *)tertiaryText {
-    [store sdl_setObject:tertiaryText forName:SDLNameTertiaryText];
+    [store sdl_setObject:tertiaryText forName:SDLRPCParameterNameTertiaryText];
 }
 
 - (nullable NSString *)tertiaryText {
@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSecondaryImage:(nullable SDLImage *)secondaryImage {
-    [store sdl_setObject:secondaryImage forName:SDLNameSecondaryImage];
+    [store sdl_setObject:secondaryImage forName:SDLRPCParameterNameSecondaryImage];
 }
 
 - (nullable SDLImage *)secondaryImage {

@@ -5,14 +5,14 @@
 #import "SDLAudioPassThruCapabilities.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLAudioPassThruCapabilities
 
 - (void)setSamplingRate:(SDLSamplingRate)samplingRate {
-    [store sdl_setObject:samplingRate forName:SDLNameSamplingRate];
+    [store sdl_setObject:samplingRate forName:SDLRPCParameterNameSamplingRate];
 }
 
 - (SDLSamplingRate)samplingRate {
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBitsPerSample:(SDLBitsPerSample)bitsPerSample {
-    [store sdl_setObject:bitsPerSample forName:SDLNameBitsPerSample];
+    [store sdl_setObject:bitsPerSample forName:SDLRPCParameterNameBitsPerSample];
 }
 
 - (SDLBitsPerSample)bitsPerSample {
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAudioType:(SDLAudioType)audioType {
-    [store sdl_setObject:audioType forName:SDLNameAudioType];
+    [store sdl_setObject:audioType forName:SDLRPCParameterNameAudioType];
 }
 
 - (SDLAudioType)audioType {

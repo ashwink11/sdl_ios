@@ -11,7 +11,7 @@
 #import "SDLVideoStreamingFormat.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPreferredResolution:(nullable SDLImageResolution *)preferredResolution {
-    [store sdl_setObject:preferredResolution forName:SDLNamePreferredResolution];
+    [store sdl_setObject:preferredResolution forName:SDLRPCParameterNamePreferredResolution];
 }
 
 - (nullable SDLImageResolution *)preferredResolution {
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMaxBitrate:(nullable NSNumber<SDLInt> *)maxBitrate {
-    [store sdl_setObject:maxBitrate forName:SDLNameMaxBitrate];
+    [store sdl_setObject:maxBitrate forName:SDLRPCParameterNameMaxBitrate];
 }
 
 - (nullable NSNumber<SDLInt> *)maxBitrate {
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSupportedFormats:(nullable NSArray<SDLVideoStreamingFormat *> *)supportedFormats {
-    [store sdl_setObject:supportedFormats forName:SDLNameSupportedFormats];
+    [store sdl_setObject:supportedFormats forName:SDLRPCParameterNameSupportedFormats];
 }
 
 - (nullable NSArray<SDLVideoStreamingFormat *> *)supportedFormats {
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHapticSpatialDataSupported:(nullable NSNumber<SDLBool> *)hapticSpatialDataSupported {
-    [store sdl_setObject:hapticSpatialDataSupported forName:SDLNameHapticSpatialDataSupported];
+    [store sdl_setObject:hapticSpatialDataSupported forName:SDLRPCParameterNameHapticSpatialDataSupported];
 }
 
 - (nullable NSNumber<SDLBool> *)hapticSpatialDataSupported {

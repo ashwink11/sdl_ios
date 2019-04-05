@@ -5,20 +5,22 @@
 #import "SDLOnSyncPData.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
+#import "SDLRPCFunctionNames.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLOnSyncPData
 
 - (instancetype)init {
-    if (self = [super initWithName:SDLNameOnSyncPData]) {
+    if (self = [super initWithName:SDLRPCFunctionNameOnSyncPData]) {
     }
     return self;
 }
 
 - (void)setURL:(nullable NSString *)URL {
-    [parameters sdl_setObject:URL forName:SDLNameURLUppercase];
+    [parameters sdl_setObject:URL forName:SDLRPCParameterNameURLUppercase];
 }
 
 - (nullable NSString *)URL {
@@ -26,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setTimeout:(nullable NSNumber<SDLInt> *)Timeout {
-    [parameters sdl_setObject:Timeout forName:SDLNameTimeoutCapitalized];
+    [parameters sdl_setObject:Timeout forName:SDLRPCParameterNameTimeoutCapitalized];
 }
 
 - (nullable NSNumber<SDLInt> *)Timeout {

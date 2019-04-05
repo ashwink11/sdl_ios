@@ -2,7 +2,7 @@
 //
 
 #import "SDLStationIDNumber.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setCountryCode:(nullable NSNumber<SDLInt> *)countryCode {
-    [store sdl_setObject:countryCode forName:SDLNameCountryCode];
+    [store sdl_setObject:countryCode forName:SDLRPCParameterNameCountryCode];
 }
 
 - (nullable NSNumber<SDLInt> *)countryCode {
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)setFccFacilityId:(nullable NSNumber<SDLInt> *)fccFacilityId {
-    [store sdl_setObject:fccFacilityId forName:SDLNameFCCFacilityId];
+    [store sdl_setObject:fccFacilityId forName:SDLRPCParameterNameFCCFacilityId];
 }
 
 - (nullable NSNumber<SDLInt> *)fccFacilityId {

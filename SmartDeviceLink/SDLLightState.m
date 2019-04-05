@@ -2,7 +2,7 @@
 //
 
 #import "SDLLightState.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "NSMutableDictionary+Store.h"
 #import "SDLRGBColor.h"
 
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setId:(SDLLightName)id {
-    [store sdl_setObject:id forName:SDLNameId];
+    [store sdl_setObject:id forName:SDLRPCParameterNameId];
 }
 
 - (SDLLightName)id {
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setStatus:(SDLLightStatus)status {
-    [store sdl_setObject:status forName:SDLNameStatus];
+    [store sdl_setObject:status forName:SDLRPCParameterNameStatus];
 }
 
 - (SDLLightStatus)status {
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setDensity:(nullable NSNumber<SDLFloat> *)density {
-    [store sdl_setObject:density forName:SDLNameDensity];
+    [store sdl_setObject:density forName:SDLRPCParameterNameDensity];
 }
 
 - (nullable NSNumber<SDLFloat> *)density {
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setColor:(nullable SDLRGBColor *)color {
-    [store sdl_setObject:color forName:SDLNameColor];
+    [store sdl_setObject:color forName:SDLRPCParameterNameColor];
 }
 
 - (nullable SDLRGBColor *)color {

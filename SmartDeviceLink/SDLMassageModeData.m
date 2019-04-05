@@ -1,7 +1,7 @@
 //  SDLMassageModeData.m
 //
 
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLMassageModeData.h"
 #import "NSMutableDictionary+Store.h"
 
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMassageMode:(SDLMassageMode)massageMode {
-    [store sdl_setObject:massageMode forName:SDLNameMassageMode];
+    [store sdl_setObject:massageMode forName:SDLRPCParameterNameMassageMode];
 }
 
 - (SDLMassageMode)massageMode {
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setMassageZone:(SDLMassageZone)massageZone {
-    [store sdl_setObject:massageZone forName:SDLNameMassageZone];
+    [store sdl_setObject:massageZone forName:SDLRPCParameterNameMassageZone];
 }
 
 - (SDLMassageZone)massageZone {

@@ -3,7 +3,7 @@
 //
 
 #import "SDLRadioControlData.h"
-#import "SDLNames.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLRDSData.h"
 #import "SDLSISData.h"
 #import "NSMutableDictionary+Store.h"
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFrequencyInteger:(nullable NSNumber<SDLInt> *)frequencyInteger {
-    [store sdl_setObject:frequencyInteger forName:SDLNameFrequencyInteger];
+    [store sdl_setObject:frequencyInteger forName:SDLRPCParameterNameFrequencyInteger];
 }
 
 - (nullable NSNumber<SDLInt> *)frequencyInteger {
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setFrequencyFraction:(nullable NSNumber<SDLInt> *)frequencyFraction {
-    [store sdl_setObject:frequencyFraction forName:SDLNameFrequencyFraction];
+    [store sdl_setObject:frequencyFraction forName:SDLRPCParameterNameFrequencyFraction];
 }
 
 - (nullable NSNumber<SDLInt> *)frequencyFraction {
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setBand:(nullable SDLRadioBand)band {
-    [store sdl_setObject:band forName:SDLNameBand];
+    [store sdl_setObject:band forName:SDLRPCParameterNameBand];
 }
 
 - (nullable SDLRadioBand)band{
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRdsData:(nullable SDLRDSData *)rdsData {
-    [store sdl_setObject:rdsData forName:SDLNameRDSData];
+    [store sdl_setObject:rdsData forName:SDLRPCParameterNameRDSData];
 }
 
 - (nullable SDLRDSData *)rdsData {
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setAvailableHDs:(nullable NSNumber<SDLInt> *)availableHDs {
-    [store sdl_setObject:availableHDs forName:SDLNameAvailableHDs];
+    [store sdl_setObject:availableHDs forName:SDLRPCParameterNameAvailableHDs];
 }
 
 - (nullable NSNumber<SDLInt> *)availableHDs {
@@ -84,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHdChannel:(nullable NSNumber<SDLInt> *)hdChannel {
-    [store sdl_setObject:hdChannel forName:SDLNameHDChannel];
+    [store sdl_setObject:hdChannel forName:SDLRPCParameterNameHDChannel];
 }
 
 - (nullable NSNumber<SDLInt> *)hdChannel {
@@ -92,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSignalStrength:(nullable NSNumber<SDLInt> *)signalStrength {
-    [store sdl_setObject:signalStrength forName:SDLNameSignalStrength];
+    [store sdl_setObject:signalStrength forName:SDLRPCParameterNameSignalStrength];
 }
 
 - (nullable NSNumber<SDLInt> *)signalStrength {
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSignalChangeThreshold:(nullable NSNumber<SDLInt> *)signalChangeThreshold {
-    [store sdl_setObject:signalChangeThreshold forName:SDLNameSignalChangeThreshold];
+    [store sdl_setObject:signalChangeThreshold forName:SDLRPCParameterNameSignalChangeThreshold];
 }
 
 - (nullable NSNumber<SDLInt> *)signalChangeThreshold {
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRadioEnable:(nullable NSNumber<SDLBool> *)radioEnable {
-    [store sdl_setObject:radioEnable forName:SDLNameRadioEnable];
+    [store sdl_setObject:radioEnable forName:SDLRPCParameterNameRadioEnable];
 }
 
 - (nullable NSNumber<SDLBool> *)radioEnable {
@@ -116,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setState:(nullable SDLRadioState)state {
-    [store sdl_setObject:state forName:SDLNameState];
+    [store sdl_setObject:state forName:SDLRPCParameterNameState];
 }
 
 - (nullable SDLRadioState)state {
@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setHdRadioEnable:(nullable NSNumber<SDLBool> *)hdRadioEnable {
-    [store sdl_setObject:hdRadioEnable forName:SDLNameHDRadioEnable];
+    [store sdl_setObject:hdRadioEnable forName:SDLRPCParameterNameHDRadioEnable];
 }
 
 - (nullable NSNumber<SDLBool> *)hdRadioEnable {
@@ -132,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSisData:(nullable SDLSISData *)sisData {
-    [store sdl_setObject:sisData forName:SDLNameSISData];
+    [store sdl_setObject:sisData forName:SDLRPCParameterNameSISData];
 }
 
 - (nullable SDLSISData *)sisData {

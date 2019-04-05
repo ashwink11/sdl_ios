@@ -9,7 +9,8 @@
 #import "SDLSystemCapability.h"
 
 #import "NSMutableDictionary+Store.h"
-#import "SDLNames.h"
+#import "SDLAppServicesCapabilities.h"
+#import "SDLRPCParameterNames.h"
 #import "SDLNavigationCapability.h"
 #import "SDLPhoneCapability.h"
 #import "SDLSystemCapabilityType.h"
@@ -19,6 +20,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @implementation SDLSystemCapability
+
+- (instancetype)initWithAppServicesCapabilities:(SDLAppServicesCapabilities *)capability {
+    self = [self init];
+    if (!self) {
+        return nil;
+    }
+
+    self.systemCapabilityType = SDLSystemCapabilityTypeAppServices;
+    self.appServicesCapabilities = capability;
+
+    return self;
+}
 
 - (instancetype)initWithPhoneCapability:(SDLPhoneCapability *)capability {
     self = [self init];
@@ -69,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setSystemCapabilityType:(SDLSystemCapabilityType)type {
-    [store sdl_setObject:type forName:SDLNameSystemCapabilityType];
+    [store sdl_setObject:type forName:SDLRPCParameterNameSystemCapabilityType];
 }
 
 - (SDLSystemCapabilityType)systemCapabilityType {
@@ -86,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setNavigationCapability:(nullable SDLNavigationCapability *)navigationCapability {
-    [store sdl_setObject:navigationCapability forName:SDLNameNavigationCapability];
+    [store sdl_setObject:navigationCapability forName:SDLRPCParameterNameNavigationCapability];
 }
 
 - (nullable SDLNavigationCapability *)navigationCapability {
@@ -94,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setPhoneCapability:(nullable SDLPhoneCapability *)phoneCapability {
-    [store sdl_setObject:phoneCapability forName:SDLNamePhoneCapability];
+    [store sdl_setObject:phoneCapability forName:SDLRPCParameterNamePhoneCapability];
 }
 
 - (nullable SDLPhoneCapability *)phoneCapability {
@@ -102,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setVideoStreamingCapability:(nullable SDLVideoStreamingCapability *)videoStreamingCapability {
-    [store sdl_setObject:videoStreamingCapability forName:SDLNameVideoStreamingCapability];
+    [store sdl_setObject:videoStreamingCapability forName:SDLRPCParameterNameVideoStreamingCapability];
 }
 
 - (nullable SDLVideoStreamingCapability *)videoStreamingCapability {
@@ -110,7 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setRemoteControlCapability:(nullable SDLRemoteControlCapabilities *)remoteControlCapability {
-    [store sdl_setObject:remoteControlCapability forName:SDLNameRemoteControlCapability];
+    [store sdl_setObject:remoteControlCapability forName:SDLRPCParameterNameRemoteControlCapability];
 }
 
 - (nullable SDLRemoteControlCapabilities *)remoteControlCapability {
