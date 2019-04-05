@@ -1303,6 +1303,8 @@
 		88802FF420853BED00E9EBC6 /* SmartDeviceLinkSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D4346631E6F38E600B639C6 /* SmartDeviceLinkSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88802FF520853CD500E9EBC6 /* SmartDeviceLinkSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88802FEF20853AE600E9EBC6 /* SmartDeviceLinkSwift.framework */; };
 		88802FF620853CD500E9EBC6 /* SmartDeviceLinkSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88802FEF20853AE600E9EBC6 /* SmartDeviceLinkSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8880D24722205B1B00964F6A /* SDLNavigationInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 8880D24522205B1B00964F6A /* SDLNavigationInstruction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8880D24822205B1B00964F6A /* SDLNavigationInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880D24622205B1B00964F6A /* SDLNavigationInstruction.m */; };
 		8881AFAC2225D61900EA870B /* SDLSetCloudAppProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 8881AFAA2225D61900EA870B /* SDLSetCloudAppProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8881AFAD2225D61900EA870B /* SDLSetCloudAppProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8881AFAB2225D61900EA870B /* SDLSetCloudAppProperties.m */; };
 		8881AFAF2225D8EB00EA870B /* SDLSetCloudAppPropertiesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8881AFAE2225D8EB00EA870B /* SDLSetCloudAppPropertiesSpec.m */; };
@@ -1315,8 +1317,6 @@
 		8881AFBE2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8881AFBC2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8881AFBF2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8881AFBD2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.m */; };
 		8881AFC12225EB9300EA870B /* SDLGetCloudAppPropertiesResponseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8881AFC02225EB9300EA870B /* SDLGetCloudAppPropertiesResponseSpec.m */; };
-		8880D24722205B1B00964F6A /* SDLNavigationInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 8880D24522205B1B00964F6A /* SDLNavigationInstruction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8880D24822205B1B00964F6A /* SDLNavigationInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880D24622205B1B00964F6A /* SDLNavigationInstruction.m */; };
 		8886EB982111F4FA008294A5 /* SDLFileManagerConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8886EB972111F4FA008294A5 /* SDLFileManagerConfigurationSpec.m */; };
 		888F86FE221DEE200052FE4C /* SDLAsynchronousRPCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 888F86FD221DEE1F0052FE4C /* SDLAsynchronousRPCOperation.m */; };
 		888F8700221DF4880052FE4C /* SDLAsynchronousRPCOperationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 888F86FF221DF4880052FE4C /* SDLAsynchronousRPCOperationSpec.m */; };
@@ -2922,6 +2922,8 @@
 		8877F5F01F34AA2D00DC128A /* SDLSendHapticDataResponseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLSendHapticDataResponseSpec.m; sourceTree = "<group>"; };
 		887BE4D322272B2200B397C2 /* SDLControlFramePayloadConstantsSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLControlFramePayloadConstantsSpec.m; sourceTree = "<group>"; };
 		88802FEF20853AE600E9EBC6 /* SmartDeviceLinkSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartDeviceLinkSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8880D24522205B1B00964F6A /* SDLNavigationInstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLNavigationInstruction.h; sourceTree = "<group>"; };
+		8880D24622205B1B00964F6A /* SDLNavigationInstruction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLNavigationInstruction.m; sourceTree = "<group>"; };
 		8881AFAA2225D61900EA870B /* SDLSetCloudAppProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLSetCloudAppProperties.h; sourceTree = "<group>"; };
 		8881AFAB2225D61900EA870B /* SDLSetCloudAppProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLSetCloudAppProperties.m; sourceTree = "<group>"; };
 		8881AFAE2225D8EB00EA870B /* SDLSetCloudAppPropertiesSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLSetCloudAppPropertiesSpec.m; sourceTree = "<group>"; };
@@ -2934,8 +2936,6 @@
 		8881AFBC2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLGetCloudAppPropertiesResponse.h; sourceTree = "<group>"; };
 		8881AFBD2225E9BB00EA870B /* SDLGetCloudAppPropertiesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLGetCloudAppPropertiesResponse.m; sourceTree = "<group>"; };
 		8881AFC02225EB9300EA870B /* SDLGetCloudAppPropertiesResponseSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLGetCloudAppPropertiesResponseSpec.m; sourceTree = "<group>"; };
-		8880D24522205B1B00964F6A /* SDLNavigationInstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLNavigationInstruction.h; sourceTree = "<group>"; };
-		8880D24622205B1B00964F6A /* SDLNavigationInstruction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLNavigationInstruction.m; sourceTree = "<group>"; };
 		8886EB972111F4FA008294A5 /* SDLFileManagerConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLFileManagerConfigurationSpec.m; sourceTree = "<group>"; };
 		888F86FD221DEE1F0052FE4C /* SDLAsynchronousRPCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLAsynchronousRPCOperation.m; sourceTree = "<group>"; };
 		888F86FF221DF4880052FE4C /* SDLAsynchronousRPCOperationSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLAsynchronousRPCOperationSpec.m; sourceTree = "<group>"; };
@@ -3032,17 +3032,7 @@
 		8BBEA6081F324832003EEA26 /* SDLMetadataTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMetadataTypeSpec.m; sourceTree = "<group>"; };
 		97E26DEA1E807AD70074A3C7 /* SDLMutableDataQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMutableDataQueue.h; sourceTree = "<group>"; };
 		97E26DEB1E807AD70074A3C7 /* SDLMutableDataQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMutableDataQueue.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-<<<<<<< HEAD
-		DA0C46AC1DCD35080001F2A8 /* SDLNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLNames.m; sourceTree = "<group>"; };
-=======
-		BB3C600D221AEF37007DD4CA /* NSMutableDictionary+StoreSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+StoreSpec.m"; path = "DevAPISpecs/NSMutableDictionary+StoreSpec.m"; sourceTree = "<group>"; };
 		DA0C46AC1DCD35080001F2A8 /* SDLRPCParameterNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLRPCParameterNames.m; sourceTree = "<group>"; };
->>>>>>> f9002ef... verify type of returned objects
-=======
-		BB3C600D221AEF37007DD4CA /* NSMutableDictionary+StoreSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+StoreSpec.m"; path = "DevAPISpecs/NSMutableDictionary+StoreSpec.m"; sourceTree = "<group>"; };
-		DA0C46AC1DCD35080001F2A8 /* SDLRPCParameterNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLRPCParameterNames.m; sourceTree = "<group>"; };
->>>>>>> daf146880ddf6f1646d058f51886a89ce4b36008
 		DA0C46AE1DCD41E30001F2A8 /* SDLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMacros.h; sourceTree = "<group>"; };
 		DA318C1D1DD0F06C00C035AC /* NSMutableDictionary+Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Store.h"; sourceTree = "<group>"; };
 		DA318C1E1DD0F06C00C035AC /* NSMutableDictionary+Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Store.m"; sourceTree = "<group>"; };
@@ -5043,7 +5033,6 @@
 			isa = PBXGroup;
 			children = (
 				5D6EB4CB1BF28DC600693731 /* NSMapTable+SubscriptingSpec.m */,
-				BB3C600D221AEF37007DD4CA /* NSMutableDictionary+StoreSpec.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -6682,7 +6671,6 @@
 				TargetAttributes = {
 					5D4019AE1A76EC350006B0C2 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = NCVC2MHU7M;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -6695,6 +6683,7 @@
 					5D61FA1B1A84237100846EE7 = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0940;
+						ProvisioningStyle = Automatic;
 					};
 					5D61FA251A84237100846EE7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -7311,16 +7300,7 @@
 				5DA026901AD44EE700019F86 /* SDLDialNumberResponseSpec.m in Sources */,
 				162E83901A9BDE8B00906325 /* SDLTireStatusSpec.m in Sources */,
 				162E82E01A9BDE8B00906325 /* SDLHMILevelSpec.m in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-				BB3C600E221AEF37007DD4CA /* NSMutableDictionary+StoreSpec.m in Sources */,
 				88F65133220C6DC300CAF321 /* SDLWeatherAlertSpec.m in Sources */,
->>>>>>> f9002ef... verify type of returned objects
-=======
-				BB3C600E221AEF37007DD4CA /* NSMutableDictionary+StoreSpec.m in Sources */,
-				88F65133220C6DC300CAF321 /* SDLWeatherAlertSpec.m in Sources */,
->>>>>>> daf146880ddf6f1646d058f51886a89ce4b36008
 				5DC09EDA1F2F7FEC00F4AB1D /* SDLControlFramePayloadNakSpec.m in Sources */,
 				1EB59CCE202DC97900343A61 /* SDLMassageCushionSpec.m in Sources */,
 				162E83041A9BDE8B00906325 /* SDLUpdateModeSpec.m in Sources */,
@@ -7988,11 +7968,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				INFOPLIST_FILE = "$(SRCROOT)/Example Apps/Example ObjC/SmartDeviceLink-Example-ObjC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.SDLTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.ashwin.SDLTestApp;
 				PRODUCT_NAME = "SDL Example";
 			};
 			name = Debug;
@@ -8002,11 +7982,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				INFOPLIST_FILE = "$(SRCROOT)/Example Apps/Example ObjC/SmartDeviceLink-Example-ObjC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.SDLTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.ashwin.SDLTestApp;
 				PRODUCT_NAME = "SDL Example";
 			};
 			name = Release;
@@ -8028,9 +8008,12 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -8049,6 +8032,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.smartdevicelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -8076,9 +8060,12 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -8093,6 +8080,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.smartdevicelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -8108,7 +8096,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -8144,7 +8132,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -8177,11 +8165,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				INFOPLIST_FILE = "$(SRCROOT)/Example Apps/Example Swift/SmartDeviceLink-Example-Swift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.SDLTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.ashwin.SDLTestApp;
 				PRODUCT_NAME = "SDL Example Swift";
 				SWIFT_OBJC_BRIDGING_HEADER = "Example Apps/Example Swift/SmartDeviceLink-Example-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -8196,11 +8184,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				INFOPLIST_FILE = "$(SRCROOT)/Example Apps/Example Swift/SmartDeviceLink-Example-Swift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.SDLTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdevicelink.ashwin.SDLTestApp;
 				PRODUCT_NAME = "SDL Example Swift";
 				SWIFT_OBJC_BRIDGING_HEADER = "Example Apps/Example Swift/SmartDeviceLink-Example-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -8228,7 +8216,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -8281,7 +8269,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NCVC2MHU7M;
+				DEVELOPMENT_TEAM = 77CUZTZ54J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
